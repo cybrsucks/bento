@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <!-- SHIFT ALT F TO REFORMAT FILE -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/icons/bento.ico">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"/>  <!-- import bootstrap -->
+    <script src="https://kit.fontawesome.com/fe5f501db5.js" crossorigin="anonymous"></script>  <!-- import fontawesome icons -->
+    <link rel="stylesheet" href="css/style.css" />  <!-- import own stylesheet -->
+    <title>Meal Planner</title>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <div class="navbar navbar-night" id="toggle-navbar">
+      <div class="home-group toggle-hover-state navbar-hover-night">
+        HOME <i class="fa-solid fa-house"></i>
+      </div>
+
+      <div class="navbar-right">
+        <ul>
+          <li>
+            <div>
+              <button id="toggle-mode-btn" onclick="solLuna()"> MAGIC </button>
+            </div>
+          </li>
+          <li>
+            <div class="shoppingList toggle-hover-state navbar-hover-night">
+              <a href="/"> 
+                Shopping List 
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="mealPlan toggle-hover-state navbar-hover-night">
+              <a href="/">
+                Meal Plan
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <!-- BREADCRUMB BAR -->
+    <div class="bcbar bcbar-night" id="toggle-bcbar">
+      <div class="datetime-group">
+        Current Date | Time: <span class="datetime" id="daydate"></span>, <span class="datetime" id="time"></span>
+      </div>
+
+      <div class="bcbar-right">
+        <ul>
+          <li class="float-right">
+            <div class="view-all-recipes">
+              <!-- <a href="/"> 
+                View All Recipes
+              </a> -->
+              <a class="special-border-a" href="#">
+                <span class="special-border-span"></span>
+                <span class="breadcrumb-bar-right-text"> View All Recipes </span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="manage-recipes">
+              <!-- <a href="/">
+                Manage Recipes
+              </a> -->
+
+              <a class="special-border-a" href="#">
+                <span class="special-border-span"></span>
+                <span class="breadcrumb-bar-right-text"> Manage Recipes </span>
+              </a>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FLEX CONTAINERS FOR RECIPES  -->
+
+    <div class="d-flex justify-content-around">
+      <div>
+        i am a div
+      </div>
+      <div>
+        i am a div 2
+      </div>
+      <div>
+        i am a div 3
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="js/script.js"></script>  <!-- import own script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script> <!-- import bootstrap -->
+</html>
