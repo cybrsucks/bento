@@ -44,11 +44,11 @@ i {
 	color: white;
 }
 
-.navbar-night {
-	background-color: black;
+.navbarNight {
+	background-color: #808fc7;
 }
 
-.navbar-light {
+.navbarLight {
 	background-color: #960018;
 }
 
@@ -61,7 +61,7 @@ i {
 
 /* NAVBAR shopping-list, meal-plan */
 
-.toggle-mode-btn {
+#toggle-btn {
 	text-align: center;
 	margin-right: 80px;
 }

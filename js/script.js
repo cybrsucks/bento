@@ -17,44 +17,45 @@ var day_of_month = today.getDate();
 
 document.getElementById("daydate").innerHTML = day + ", " + month + " " + day_of_month
 
+const toggleBtn = document.getElementById("toggle-btn");
+const toggleNavbar = document.getElementById("toggleNavbar");
+let lightMode = localStorage.getItem("lightMode");
+
+const enableLightMode = () => {
+    toggleNavbar.classList.add("navbarLight");
+    toggleNavbar.classList.remove("navbarNight");
+
+    toggleBtn.classList.remove("darkToggle");
+
+    localStorage.setItem("lightMode", "enabled");
+};
 
 
+const disableLightMode = () => {
+    toggleNavbar.classList.add("navbarNight");
+    toggleNavbar.classList.remove("navbarLight");
 
-function solLuna() {
-    const navbar = document.getElementById("toggle-navbar");
-    const bcbar = document.getElementById("toggle-bcbar");
-    const hoverState = document.getElementsByClassName("toggle-hover-state");
+    toggleBtn.classList.add("darkToggle");
 
-    if (navbar.classList.contains("navbar-night")) {
-        document.body.style.backgroundColor = '#EEEDE7';
-        /* modify colours of navbar */
-        navbar.classList.remove("navbar-night")
-        navbar.classList.add("navbar-light")
+    localStorage.setItem("lightMode", "disabled");
+};
 
-        /* modify colours of bcbar */
-        bcbar.classList.remove("bcbar-night")
-        bcbar.classList.add("bcbar-light")
 
-        /* modify colours of hover state */
-        for (var i=0; i< hoverState.length; i++) {
-            hoverState[i].classList.remove("navbar-hover-night")
-            hoverState[i].classList.add("navbar-hover-light")
-        }
-    } 
-    else{
-        document.body.style.backgroundColor = '#4B4D4F';
-        /* modify colours of navbar */
-        navbar.classList.remove("navbar-light")
-        navbar.classList.add("navbar-night")
-
-        /* modify colours of bcbar */
-        bcbar.classList.remove("bcbar-light")
-        bcbar.classList.add("bcbar-night")
-
-        /* modify colours of hover state */
-        for (var i=0; i< hoverState.length; i++) {
-            hoverState[i].classList.remove("navbar-hover-light")
-            hoverState[i].classList.add("navbar-hover-night")
-        }
-    }
+if (lightMode === "enabled") {
+    enableLightMode(); // set state of LightMode on page load
 }
+
+if (lightMode === null | lightMode == "disabled") {
+    disableLightMode(); // set state of LightMode on page load
+}
+
+toggleBtn.addEventListener("click", (e) => {
+    lightMode = localStorage.getItem("lightMode"); // update darkMode when clicked
+    if (lightMode === "disabled") {
+        enableLightMode();
+    } else {
+        disableLightMode();
+    }
+});
+
+
