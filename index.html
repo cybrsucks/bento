@@ -13,39 +13,48 @@
       crossorigin="anonymous"/>  <!-- import bootstrap -->
     <script src="https://kit.fontawesome.com/fe5f501db5.js" crossorigin="anonymous"></script>  <!-- import fontawesome icons -->
     <link rel="stylesheet" href="css/style.css" />  <!-- import own stylesheet -->
+    <link rel="stylesheet" href="css/navigationBar.css" />  <!-- import own stylesheet -->
+    <link rel="stylesheet" href="css/modeSwitch.css" />  <!-- import own stylesheet -->
+    <link rel="stylesheet" href="css/breadcrumbBar.css" />  <!-- import own stylesheet -->
+    <link rel="stylesheet" href="css/minimalBorder.css" />  <!-- import own stylesheet -->
     <title>BENTO: Meal Planner</title>
   </head>
   <body>
     <!-- NAVIGATION BAR -->
     <div class="navbar" id="toggleNavbar">
-      <div class="home-group toggle-hover-state navbar-hover-night">
+      <div class="home-group toggle-hover-state">
         HOME <i class="fa-solid fa-house"></i>
       </div>
 
       <div class="navbar-right">
         <ul>
-          <li>
+
+          <li style="margin:auto;">
             <div>
-              <button id="toggle-btn" onclick="solLuna()"> MAGIC </button>
+              <input type="checkbox" id="toggle" class="toggle--checkbox"/>
+              <label for="toggle" id="toggle-btn" class="toggle--label">
+              </label>
             </div>
           </li>
-          <li>
-            <div class="shoppingList toggle-hover-state navbar-hover-night">
-              <a href="/"> 
-                Shopping List 
-                <i class="fa-solid fa-cart-shopping"></i>
+
+          <li style="margin-right:20px;">
+            <div class="toggle-hover-state">
+              <a href="/">
+              <div class="shoppingList">Shopping List</div>
+              <i class="fa-solid fa-cart-shopping"></i>
               </a>
             </div>
           </li>
 
-          <li>
-            <div class="mealPlan toggle-hover-state navbar-hover-night">
+          <li style="margin-right:50px;">
+            <div class="toggle-hover-state">
               <a href="/">
-                Meal Plan
-                <i class="fa-solid fa-pen-to-square"></i>
+              <div class="mealPlan">Meal Plan</div>
+              <i class="fa-solid fa-pen-to-square"></i>
               </a>
             </div>
           </li>
+
         </ul>
       </div>
     </div>

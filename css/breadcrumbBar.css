@@ -1,0 +1,52 @@
+/* BCBAR */
+.bcbar {
+	z-index: 9;
+	padding: 5px;
+	margin: auto;
+	font-size: 1.1em;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bcbar-night {
+	background-color: #707070;
+}
+
+.bcbar-light {
+	background-color: #C4707D;
+}
+
+
+/* BCBAR DATETIME */
+.datetime-group {
+	padding: 10px;
+}
+
+
+/* BCBAR view-all-recipes, manage-recipes */
+.bcbar-right {
+	text-align: center;
+	margin: auto 0;
+}
+
+.bcbar-right>ul {
+	/* ul selector */
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	margin: 0;
+}
+
+.bcbar-right>ul>li>div>a {
+	color: white
+}
+
+.bcbar-right {
+	right: 200px;
+	position: relative;
+}
+
+.float-right {
+	margin-right: 40px;
+}

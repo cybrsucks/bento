@@ -1,0 +1,48 @@
+/* FUNKY BUTTON DESIGN! */
+.special-border-a {
+	position: relative;
+	color: white;
+	padding: 6px;
+	/* margin-right: 80px; */
+	/* top: 30%; */
+	transform: translateY(50%);
+}
+
+.special-border-a:hover {
+	background-color: #666666;
+}
+
+.special-border-a::before,
+.special-border-a::after,
+.special-border-span::before,
+.special-border-span::after {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	transition: 0.5s;
+}
+
+.special-border-a::before {
+	top: -3px;
+	left: -3px;
+	border-top: 3px solid white;
+	border-left: 3px solid white;
+}
+
+
+.special-border-span::after {
+	bottom: -3px;
+	right: -3px;
+	border-bottom: 3px solid white;
+	border-right: 3px solid white;
+}
+
+
+.special-border-a:hover::before,
+.special-border-a:hover::after,
+.special-border-a:hover span::before,
+.special-border-a:hover span::after {
+	width: calc(100% + 6px);
+	height: calc(100% + 6px);
+}
