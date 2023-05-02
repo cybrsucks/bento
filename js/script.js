@@ -58,10 +58,12 @@ const disableLightMode = () => {
 
 if (lightMode == "enabled" | lightMode == null) {
     enableLightMode(); // set state of LightMode on page load
+    document.getElementById('toggle').checked = false;
 }
 
 if (lightMode == "disabled") {
     disableLightMode(); // set state of LightMode on page load
+    document.getElementById('toggle').checked = true;
 }
 
 toggleBtn.addEventListener("click", (e) => {
