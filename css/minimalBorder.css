@@ -8,10 +8,6 @@
 	transform: translateY(50%);
 }
 
-.special-border-a:hover {
-	background-color: #666666;
-}
-
 .special-border-a::before,
 .special-border-a::after,
 .special-border-span::before,

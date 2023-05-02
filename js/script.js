@@ -21,37 +21,63 @@ document.getElementById("daydate").innerHTML = day + ", " + month + " " + day_of
 
 
 const toggleBtn = document.getElementById("toggle-btn");
+
 const toggleNavbar = document.getElementById("toggleNavbar");
-const toggleHoverState = document.getElementsByClassName("toggle-hover-state");
+const hoverNav = document.getElementsByClassName("hoverNav");
+
+const toggleBcbar = document.getElementById("toggleBcbar");
+const hoverBc = document.getElementsByClassName("hoverBc");
+
 let lightMode = localStorage.getItem("lightMode");
 
 const enableLightMode = () => {
+    /* Navigation Bar */
     toggleNavbar.classList.add("navbarLight");
     toggleNavbar.classList.remove("navbarNight");
 
-
-    for (var i=0; i< toggleHoverState.length; i++) {
-        toggleHoverState[i].classList.add("navbar-hover-light")
-        toggleHoverState[i].classList.remove("navbar-hover-night")
+    /* hoverNavBar */
+    for (var i=0; i< hoverNav.length; i++) {
+        hoverNav[i].classList.add("navbar-hover-light")
+        hoverNav[i].classList.remove("navbar-hover-night")
     }
 
-    // toggleBtn.classList.remove("darkToggle");
+    /* Breadcrumb Bar */
+    toggleBcbar.classList.add("bcbarLight");
+    toggleBcbar.classList.remove("bcbarNight");
 
+    /* hoverBcBar */
+    for (var i=0; i< hoverBc.length; i++) {
+        hoverBc[i].classList.add("bcbar-hover-light")
+        hoverBc[i].classList.remove("bcbar-hover-night")
+    }   
+
+    /* Set localStorage value */
     localStorage.setItem("lightMode", "enabled");
 };
 
 
 const disableLightMode = () => {
+    /* Navigation Bar */
     toggleNavbar.classList.add("navbarNight");
     toggleNavbar.classList.remove("navbarLight");
 
-    for (var i=0; i< toggleHoverState.length; i++) {
-        toggleHoverState[i].classList.add("navbar-hover-night")
-        toggleHoverState[i].classList.remove("navbar-hover-light")
+    /* hoverNavBar */
+    for (var i=0; i< hoverNav.length; i++) {
+        hoverNav[i].classList.add("navbar-hover-night")
+        hoverNav[i].classList.remove("navbar-hover-light")
     }
 
-    // toggleBtn.classList.add("darkToggle");
+    /* Breadcrumb Bar */
+    toggleBcbar.classList.add("bcbarNight");
+    toggleBcbar.classList.remove("bcbarLight");
 
+    /* hoverBcBar */
+    for (var i=0; i< hoverBc.length; i++) {
+        hoverBc[i].classList.add("bcbar-hover-night")
+        hoverBc[i].classList.remove("bcbar-hover-light")
+    }   
+
+    /* Set localStorage value */
     localStorage.setItem("lightMode", "disabled");
 };
 
