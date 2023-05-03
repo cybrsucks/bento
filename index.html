@@ -13,6 +13,7 @@
       crossorigin="anonymous"/>  <!-- import bootstrap -->
     <script src="https://kit.fontawesome.com/fe5f501db5.js" crossorigin="anonymous"></script>  <!-- import fontawesome icons -->
     <link rel="stylesheet" href="css/style.css" />  <!-- import own stylesheet -->
+    <link rel="stylesheet" href="css/homeBody.css" />  <!-- import own stylesheet -->
     <link rel="stylesheet" href="css/scrollbar.css" />  <!-- import own stylesheet -->
     <link rel="stylesheet" href="css/navigationBar.css" />  <!-- import own stylesheet -->
     <link rel="stylesheet" href="css/modeSwitch.css" />  <!-- import own stylesheet -->
@@ -23,6 +24,7 @@
     <title>BENTO: Meal Planner</title>
   </head>
   <body id="noBodynoBodybutYou">
+
     <!-- NAVIGATION BAR -->
     <div class="navbar" id="toggleNavbar">
       <div class="home-group hoverNav">
@@ -30,10 +32,8 @@
           HOME <i class="fa-solid fa-house"></i>
         </a>
       </div>
-
       <div class="navbar-right">
         <ul>
-
           <li style="margin:auto;">
             <div style="margin-right: 30px">
               <input type="checkbox" id="toggle" class="toggle--checkbox"/>
@@ -41,7 +41,6 @@
               </label>
             </div>
           </li>
-
           <li style="margin-right:20px;">
             <div class="hoverNav">
               <a href="/shoppingList.html" class="navbarLinks">
@@ -50,7 +49,6 @@
               </a>
             </div>
           </li>
-
           <li style="margin-right:20px;">
             <div class="hoverNav">
               <a href="/mealPlan.html" class="navbarLinks">
@@ -59,7 +57,6 @@
               </a>
             </div>
           </li>
-
         </ul>
       </div>
     </div>
@@ -69,7 +66,6 @@
       <div class="datetime-group">
         Current Date | Time: <span class="datetime" id="daydate"></span>, <span class="datetime" id="time"></span>
       </div>
-
       <div class="bcbar-right">
         <ul>
           <li class="float-right">
@@ -80,21 +76,17 @@
               </a>
             </div>
           </li>
-
           <li>
             <div class="manage-recipes">
               <a class="special-border-a hoverBc" href="/manageRecipes.html">
                 <span class="special-border-span"></span>
                 <span class="breadcrumb-bar-right-text"> Manage Recipes </span>
               </a>
-
             </div>
           </li>
         </ul>
       </div>
     </div>
-
-
 
     <!-- FLEX CONTAINERS FOR RECIPES  -->
     <div id="breakfast-container">
@@ -200,6 +192,32 @@
 
     </div>
   </body>
+
+
+
+
+  <!-- FOOTER SECTION -->
+  <footer id="elfooter">
+    <div class="footer-container">
+      <div class="footerDivs">
+        <span class="footerBENTO"> BENTO </span>
+      </div>
+      <div class="footerIcons">
+        <img src="assets/icons/carmine-icons/github-carmine.png" width="40" height="40">
+        <img src="assets/icons/carmine-icons/block-question-carmine.png" width="40" height="40">
+      </div>
+      <div class="footerDivs">
+        <span> Home </span>
+        <span> Breakfast </span>
+        <span> Lunch </span>
+        <span> Dinner </span>
+      </div>
+  </div>
+
+
+
+
+  </footer>
 
   <script type="text/javascript" src="js/script.js"></script>  <!-- import own script -->
   <script type="text/javascript" src="js/modeSwitch.js"></script>  <!-- import own script -->

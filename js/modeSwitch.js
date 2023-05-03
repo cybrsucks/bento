@@ -12,6 +12,8 @@ const hoverNav = document.getElementsByClassName("hoverNav");
 const toggleBcbar = document.getElementById("toggleBcbar");
 const hoverBc = document.getElementsByClassName("hoverBc");
 
+const footer = document.getElementById("elfooter")
+
 let lightMode = localStorage.getItem("lightMode");
 
 const enableLightMode = () => {
@@ -44,6 +46,10 @@ const enableLightMode = () => {
         hoverBc[i].classList.remove("bcbar-hover-night")
     }   
 
+    /* Footer */
+    footer.classList.add("footerLight");
+    footer.classList.remove("footerNight");
+    
     /* Set localStorage value */
     localStorage.setItem("lightMode", "enabled");
 };
@@ -78,6 +84,10 @@ const disableLightMode = () => {
         hoverBc[i].classList.add("bcbar-hover-night")
         hoverBc[i].classList.remove("bcbar-hover-light")
     }   
+
+    /* Footer */
+    footer.classList.add("footerNight");
+    footer.classList.remove("footerLight");
 
     /* Set localStorage value */
     localStorage.setItem("lightMode", "disabled");

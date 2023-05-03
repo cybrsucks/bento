@@ -28,3 +28,8 @@
 	background-color: #525252;
 }
 
+/* footer */
+.footerNight {
+	background-color: #707070;
+	background-image: url("/assets/backgroundImages/foodIconsNight.png");
+}

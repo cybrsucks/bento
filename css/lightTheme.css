@@ -28,3 +28,9 @@
 .bcbar-hover-light:hover {
 	background-color: #B54C5C;
 }
+
+/* footer */
+.footerLight {
+	background-color: #E0B3BA;
+	background-image: url("/assets/backgroundImages/foodIconsLight.png");
+}
