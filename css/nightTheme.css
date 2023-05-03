@@ -1,11 +1,30 @@
+.nightBody{
+	z-index: -1;
+	background-color: #4B4D4F;
+}
+
+/* Navigation Bar */
 .navbarNight {
 	background-color: #262a3b;
 }
 
-.bcbar-hover-night:hover {
-	background-color: #666666;
+/* navbar links */
+.navbarNightA {
+	color: white;
 }
 
+/* hoverNavBar */
+.navbar-hover-night:hover {
+	background-color: #515462;
+}
+
+/* Breadcrumb Bar */
 .bcbarNight {
 	background-color: #707070;
 }
+
+/* hoverBcBar */
+.bcbar-hover-night:hover {
+	background-color: #525252;
+}
+

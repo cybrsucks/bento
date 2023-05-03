@@ -3,11 +3,12 @@
 	padding: 5px;
 	margin: auto;
 	font-size: 1.3em;
-	color: white;
+	color: #960018;
 }
 
 /* NAVBAR HOME */
 .home-group {
+	margin-left: 20px;
 	padding: 10px;
 }
 
@@ -28,20 +29,16 @@
 	display: inline;
 }
 
+.hoverNav{
+	padding: 10px;
+}
+
 .hoverNav:hover,
 .home-group:hover {
 	border-radius: 5px;
 	transition: 0.3s ease;
 }
 
-.navbar-hover-night:hover {
-	background-color: #515462;
-}
-
-.navbar-hover-light:hover {
-	background-color: #ca000f;
-}
-
-.navbar-right>ul>li>div>a {
+/* .navbar-right>ul>li>div>a {
 	color: white;
-}
+} */
