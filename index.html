@@ -63,7 +63,7 @@
 
     <!-- BREADCRUMB BAR -->
     <div class="bcbar" id="toggleBcbar">
-      <div class="datetime-group">
+      <div class="datetime-group bcbarText">
         Current Date | Time: <span class="datetime" id="daydate"></span>, <span class="datetime" id="time"></span>
       </div>
       <div class="bcbar-right">
@@ -72,7 +72,7 @@
             <div class="view-all-recipes">
               <a class="special-border-a hoverBc" href="/viewAllRecipes.html">
                 <span class="special-border-span"></span>
-                <span class="breadcrumb-bar-right-text"> View All Recipes </span>
+                <span class="breadcrumb-bar-right-text bcbarText"> View All Recipes </span>
               </a>
             </div>
           </li>
@@ -80,7 +80,7 @@
             <div class="manage-recipes">
               <a class="special-border-a hoverBc" href="/manageRecipes.html">
                 <span class="special-border-span"></span>
-                <span class="breadcrumb-bar-right-text"> Manage Recipes </span>
+                <span class="breadcrumb-bar-right-text bcbarText"> Manage Recipes </span>
               </a>
             </div>
           </li>
@@ -91,8 +91,8 @@
     <!-- FLEX CONTAINERS FOR RECIPES  -->
     <div id="breakfast-container">
       <div class="mealBar">
-        <h2 class="mealTitle"> Breakfast </h2>
-        <p class="viewMore"> View More </p>
+        <h2 class="mealTitle bodyText"> Breakfast </h2>
+        <p class="viewMore bodyText"> View More </p>
       </div>
 
       <div class="d-flex justify-content-around recipeDiv">
@@ -100,33 +100,33 @@
           <div class="imageZoom">
             <img src="images/egg-benedict.jpg" alt="eggs benedict">
           </div>
-          <p> Eggs Benedict</p>
+          <p class="bodyText"> Eggs Benedict</p>
         </div>
         <div class="recipeCard">
           <div class="imageZoom">
             <img src="images/omelette.jpg" alt="omelette">
           </div>
-            <p> Omelette </p>
+            <p class="bodyText"> Omelette </p>
         </div>
         <div class="recipeCard">
           <div class="imageZoom">
             <img src="images/french-toast.jpg" alt="french toast">
           </div>
-          <p> French Toast </p>
+          <p class="bodyText"> French Toast </p>
         </div>
         <div class="recipeCard">
           <div class="imageZoom">
             <img src="images/souffle-pancake.jpg" alt="souffle pancake">
           </div>
-          <p> Souffle Pancake </p>
+          <p class="bodyText"> Souffle Pancake </p>
         </div>
       </div>
     </div>
 
     <div id="lunch-container">
       <div class="mealBar">
-        <h2 class="mealTitle"> Lunch </h2>
-        <p class="viewMore"> View More </p>
+        <h2 class="mealTitle bodyText"> Lunch </h2>
+        <p class="viewMore bodyText"> View More </p>
       </div>
 
       <div class="d-flex justify-content-around recipeDiv">
@@ -134,33 +134,33 @@
           <div class="imageZoom">
             <img src="images/oyakodon.jpg" alt="oyakodon">
           </div>
-          <p> Oyakodon </p>
+          <p class="bodyText"> Oyakodon </p>
         </div>
         <div class="recipeCard">
           <div class="imageZoom">
             <img src="images/pad-thai.jpg" alt="pad thai">
           </div>
-            <p> Pad Thai </p>
+            <p class="bodyText"> Pad Thai </p>
         </div>
         <div class="recipeCard">
           <div class="imageZoom">
             <img src="images/korean-fried-chicken-kfc.jpg" alt="korean fried chicken">
           </div>
-          <p> Korean Fried Chicken </p>
+          <p class="bodyText"> Korean Fried Chicken </p>
         </div>
         <div class="recipeCard">
           <div class="imageZoom">
             <img src="images/uncle-roger-fried-rice.jpg" alt="uncle roger fried rice">
           </div>
-          <p> Uncle Roger Fried Rice </p>
+          <p class="bodyText"> Uncle Roger Fried Rice </p>
         </div>
       </div>
     </div>
 
     <div id="dinner-container">
       <div class="mealBar">
-        <h2 class="mealTitle"> Dinner </h2>
-        <p class="viewMore"> View More </p>
+        <h2 class="mealTitle bodyText"> Dinner </h2>
+        <p class="viewMore bodyText"> View More </p>
       </div>
 
       <div class="d-flex justify-content-around recipeDiv">
@@ -168,25 +168,25 @@
           <div class="imageZoom">
             <img src="images/shepherds-pie.jpg" alt="shepherd's pie">
           </div>
-          <p> Shepherd's Pie </p>
+          <p class="bodyText"> Shepherd's Pie </p>
         </div>
         <div class="recipeCard">
           <div class="imageZoom">
             <img src="images/katsudon.jpg" alt="katsudon">
           </div>
-            <p> Katsudon </p>
+            <p class="bodyText"> Katsudon </p>
         </div>
         <div class="recipeCard">
           <div class="imageZoom">
             <img src="images/salmon-bake-rice.jpg" alt="salmon baked rice">
           </div>
-          <p> Salmon Baked Rice </p>
+          <p class="bodyText"> Salmon Baked Rice </p>
         </div>
         <div class="recipeCard">
           <div class="imageZoom">
             <img src="images/lamb-stroganoff-w-pasta.jpg" alt="lamb stroganoff">
           </div>
-          <p> Lamb Stroganoff </p>
+          <p class="bodyText"> Lamb Stroganoff </p>
         </div>
       </div>
 
@@ -203,8 +203,10 @@
         <span class="footerBENTO"> BENTO </span>
       </div>
       <div class="footerIcons">
-        <img src="assets/icons/carmine-icons/github-carmine.png" width="40" height="40">
-        <img src="assets/icons/carmine-icons/block-question-carmine.png" width="40" height="40">
+        <i class="fa-solid fa-block-question"></i>
+        <i class="fa-brands fa-github"></i>
+        <!-- <img src="assets/icons/carmine-icons/github-carmine.png" width="40" height="40">
+        <img src="assets/icons/carmine-icons/block-question-carmine.png" width="40" height="40"> -->
       </div>
       <div class="footerDivs">
         <span> Home </span>

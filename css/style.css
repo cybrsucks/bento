@@ -15,6 +15,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Josefin Sans', 'Segoe UI', 'Calibri';
+	font-weight: 500;
 }
 
 body {
@@ -35,6 +36,56 @@ i {
 	width: 25px;
 }
 
+
+/* BODY CONTENT: RECIPES */
+.mealBar {
+	display: flex;
+	padding: 30px 100px 0px 100px;
+	justify-content: space-between;
+}
+
+.viewMore {
+	display: inline;
+	text-align: center;
+}
+
+.mealTitle {
+	display: inline;
+}
+
+.recipeDiv {
+	padding: 30px 60px;
+}
+
+.recipeCard p {
+	text-align: center;
+	font-size: 1.2em;
+	margin: 10px;
+}
+
+.imageZoom {
+	overflow: hidden;
+	border-radius: 24px;
+}
+
+.imageZoom img {
+	width: 200px;
+	height: 200px;
+	border-radius: 24px;
+	transition: 0.3s all ease-in-out;
+}
+
+.imageZoom:hover img{
+	transform: scale(1.3);
+}
+
+/* end of BODY CONTENT: RECIPES */
+
+
+
+
+
+/* FOOTER */
 footer {
 	height: 270px;
 	border-radius: 24px 24px 0px 0px;
@@ -56,7 +107,7 @@ footer {
 }
 
 .footerDivs {
-	text-align: center
+	text-align: center;
 	display: inline;
 }
 
@@ -70,3 +121,5 @@ footer {
 	display: flex;
 	margin: 12px;
 }
+
+/* end of FOOTER */
