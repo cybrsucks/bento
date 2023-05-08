@@ -14,7 +14,10 @@ const hoverBc = document.getElementsByClassName("hoverBc");
 
 const bodyText = document.getElementsByClassName("bodyText");
 
-const footer = document.getElementById("elfooter")
+const footer = document.getElementById("elfooter");
+const footerItems = document.getElementsByClassName("toggleFooterItemColour");
+
+const footerLine = document.getElementById("verticalFooterLine");
 
 let lightMode = localStorage.getItem("lightMode");
 
@@ -63,8 +66,19 @@ const enableLightMode = () => {
     /* Footer */
     footer.classList.add("footerLight");
     footer.classList.remove("footerNight");
-    
 
+
+    /* Footer Items */
+    for (var i=0; i< footerItems.length; i++) {
+        footerItems[i].classList.add("footerItemsLight")
+        footerItems[i].classList.remove("footerItemsNight")
+    }   
+
+    /* Footer Line */
+    footerLine.classList.add("verticalFooterLineLight");
+    footerLine.classList.remove("verticalFooterLineNight");
+
+    
     /* Set localStorage value */
     localStorage.setItem("lightMode", "enabled");
 };
@@ -116,6 +130,18 @@ const disableLightMode = () => {
     /* Footer */
     footer.classList.add("footerNight");
     footer.classList.remove("footerLight");
+
+
+    /* Footer Items */
+    for (var i=0; i< footerItems.length; i++) {
+        footerItems[i].classList.add("footerItemsNight")
+        footerItems[i].classList.remove("footerItemsLight")
+    }   
+
+
+    /* Footer Line */
+    footerLine.classList.add("verticalFooterLineNight");
+    footerLine.classList.remove("verticalFooterLineLight");
 
 
     /* Set localStorage value */

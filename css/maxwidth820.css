@@ -1,0 +1,144 @@
+/* create a position absolute footer from (https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/) */
+@media screen and (max-width: 840px) {
+	#page-container {
+		position: relative;
+		min-height: 100vh;
+	}
+
+	#content-wrap {
+		padding-bottom: 25rem;    /* Footer height */
+	}
+}
+/* end of position absolute footer */
+
+
+/* ipad air dimensions */
+@media screen and (max-width: 840px) {
+	.mealBar {
+		display: flex;
+		padding: 5rem 3rem 0 3rem;
+		justify-content: space-between;
+	}
+
+	.recipeCard, imageZoom img {
+		width: 9rem;
+		height: 9rem;
+	}
+
+	.imageZoom img {
+		border-radius: 24px;
+		transition: 0.3s all ease-in-out;
+	}
+
+	.recipeCard p {
+		text-align: center;
+		font-size: 0.9rem;
+		margin: 10px;
+		overflow-wrap: break-word;
+	}
+}
+
+/* FOOTER */
+
+/* ipad air dimensions */
+@media screen and (max-width: 840px) {
+	footer {
+		height: 20rem;
+		border-radius: 24px 24px 0px 0px;
+		background-repeat: repeat-x ;
+		display: flex;
+		width: calc(100vw - (100vw - 100%));  /* exclude scrollbar width , help from here: https://stackoverflow.com/questions/33606565/is-it-possible-to-calculate-the-viewport-width-vw-without-scrollbar*/
+		margin-top: 20px;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.footerIconsMobile {
+		display: inline;
+		margin: auto;
+		text-align: center;
+	}
+	
+	.footerIconsMobile i {
+		padding: 0 1.8rem 0 0;
+		font-size: 1.8rem;
+		margin: auto 0.8rem;
+		justify-content: center;
+	}
+	
+	.footer-container {
+		display: block;
+		width: 100%;
+	}
+
+	.footerDivs {
+		display: flex;
+	}
+
+	.footerBENTO {
+		text-align: center;
+		font-size: 2.7rem;
+		font-family: 'Rubik';
+		font-weight: bold;
+		display: flex;
+		margin: auto 0 auto 0;
+	}
+	
+	.footerTable{
+		display: none;
+	}
+	
+	.footerIcons {
+		display: none;
+		flex-direction: row;
+		text-align: center;
+	}
+	
+	.footerIcons i {
+		padding: 0 1.8rem 0 0;
+		font-size: 1.8rem;
+		margin: auto 0.8rem;
+		justify-content: center;
+	}
+	
+	#verticalFooterLine {
+		display: none;
+	}
+	
+	.footerTitle {
+		display: none;
+	}
+	
+	.footerSubtitle {
+		display: none;
+	}
+
+	.footer-accordion{
+		display: block;
+		width: 100%;
+		transition: 0.3s ease-in-out;
+	}
+
+	.accordion-item-header {
+		background-color: lightgrey;
+		color: white;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+	}
+
+	.accordionActive, .accordion-item-header:hover {
+		background-color: #555;
+	}
+	
+	.accordion-item-body {
+		padding: 0 18px;
+		display: none;
+		overflow: hidden;
+		background-color: #f1f1f1;
+	}
+}

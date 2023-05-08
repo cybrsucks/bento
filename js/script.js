@@ -16,3 +16,41 @@ var month = today.toLocaleString('default', { month: 'short'});
 var day_of_month = today.getDate();
 
 document.getElementById("daydate").innerHTML = day + ", " + month + " " + day_of_month
+
+
+/* collapsible function for footer on mobile devices */
+/* thanks to https://stackoverflow.com/questions/70371274/how-to-create-accordions-so-only-1-stays-open-at-a-time */
+const accordions = document.querySelectorAll(".footer-accordion");
+
+accordions.forEach(accordion => {
+    accordion.addEventListener("click", function(event) {
+        if (event.target.matches(".accordion-item-header")) {
+
+            let active = this.querySelector(".accordionActive");
+
+            if (active == event.target) {
+                event.target.classList.toggle("accordionActive");
+
+                var content = event.target.nextElementSibling;
+                content.style.display = "block";
+            } else {
+                //Remove current active.
+                if (active) {
+                    active.classList.remove("accordionActive");
+
+                    var content = active.nextElementSibling;
+                    content.style.display = "none";
+                }
+                //Add active        
+                event.target.classList.add("accordionActive");
+
+                var content = event.target.nextElementSibling;
+                content.style.display = "block";
+            }
+        }
+    });
+});
+
+
+
+

@@ -1,9 +1,13 @@
 /* NAVBAR */
 .navbar {
-	padding: 5px;
+	padding: 0.4rem;
 	margin: auto;
 	font-size: 1.3em;
 	color: #960018;
+	width: calc(100vw - (100vw - 100%));  /* exclude scrollbar width , help from here: https://stackoverflow.com/questions/33606565/is-it-possible-to-calculate-the-viewport-width-vw-without-scrollbar*/
+	position: relative;
+	display: flex;
+	top: 0;
 }
 
 /* NAVBAR HOME */

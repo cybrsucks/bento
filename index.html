@@ -13,7 +13,6 @@
       crossorigin="anonymous"/>  <!-- import bootstrap -->
     <script src="https://kit.fontawesome.com/fe5f501db5.js" crossorigin="anonymous"></script>  <!-- import fontawesome icons -->
     <link rel="stylesheet" href="css/style.css" />  <!-- import own stylesheet -->
-    <link rel="stylesheet" href="css/homeBody.css" />  <!-- import own stylesheet -->
     <link rel="stylesheet" href="css/scrollbar.css" />  <!-- import own stylesheet -->
     <link rel="stylesheet" href="css/navigationBar.css" />  <!-- import own stylesheet -->
     <link rel="stylesheet" href="css/modeSwitch.css" />  <!-- import own stylesheet -->
@@ -21,205 +20,286 @@
     <link rel="stylesheet" href="css/nightTheme.css" />  <!-- import own stylesheet -->
     <link rel="stylesheet" href="css/lightTheme.css" />  <!-- import own stylesheet -->
     <link rel="stylesheet" href="css/minimalBorder.css" />  <!-- import own stylesheet -->
+    <!-- other dimensions / devices -->
+    <link rel="stylesheet" href="css/maxwidth1665.css" />  <!-- import own stylesheet -->
+    <link rel="stylesheet" href="css/maxwidth820.css" />  <!-- import own stylesheet -->
+    <link rel="stylesheet" href="css/maxwidth720.css" />  <!-- import own stylesheet -->
     <title>BENTO: Meal Planner</title>
   </head>
   <body id="noBodynoBodybutYou">
+    <div id="page-container">
+      <div id="content-wrap">
+        <!-- NAVIGATION BAR -->
+        <div class="navbar" id="toggleNavbar">
+          <div class="home-group hoverNav">
+            <a href="/" class="navbarLinks">
+              HOME <i class="fa-solid fa-house"></i>
+            </a>
+          </div>
+          <div class="navbar-right">
+            <ul>
+              <li style="margin:auto;">
+                <div style="margin-right: 30px">
+                  <input type="checkbox" id="toggle" class="toggle--checkbox"/>
+                  <label for="toggle" id="toggle-btn" class="toggle--label">
+                  </label>
+                </div>
+              </li>
+              <li style="padding-right:20px;">
+                <div class="hoverNav">
+                  <a href="/shoppingList.html" class="navbarLinks">
+                  <div class="shoppingList">Shopping List</div>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </div>
+              </li>
+              <li style="padding-right:20px;">
+                <div class="hoverNav">
+                  <a href="/mealPlan.html" class="navbarLinks">
+                  <div class="mealPlan">Meal Plan</div>
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- NAVIGATION BAR -->
-    <div class="navbar" id="toggleNavbar">
-      <div class="home-group hoverNav">
-        <a href="/" class="navbarLinks">
-          HOME <i class="fa-solid fa-house"></i>
-        </a>
-      </div>
-      <div class="navbar-right">
-        <ul>
-          <li style="margin:auto;">
-            <div style="margin-right: 30px">
-              <input type="checkbox" id="toggle" class="toggle--checkbox"/>
-              <label for="toggle" id="toggle-btn" class="toggle--label">
-              </label>
+        <!-- BREADCRUMB BAR -->
+        <div class="bcbar" id="toggleBcbar">
+          <div class="datetime-group bcbarText">
+            Current Date | Time: <span class="datetime" id="daydate"></span>, <span class="datetime" id="time"></span>
+          </div>
+          <div class="bcbar-right">
+            <ul>
+              <li class="float-right">
+                <div class="view-all-recipes">
+                  <a class="special-border-a hoverBc" href="/viewAllRecipes.html">
+                    <span class="special-border-span"></span>
+                    <span class="breadcrumb-bar-right-text bcbarText"> View All Recipes </span>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="manage-recipes">
+                  <a class="special-border-a hoverBc" href="/manageRecipes.html">
+                    <span class="special-border-span"></span>
+                    <span class="breadcrumb-bar-right-text bcbarText"> Manage Recipes </span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pageContent">
+          <!-- FLEX CONTAINERS FOR RECIPES  -->
+          <div id="breakfast-container">
+            <div class="mealBar">
+              <h2 class="mealTitle bodyText"> Breakfast </h2>
+              <p class="viewMore bodyText"> View More </p>
             </div>
-          </li>
-          <li style="margin-right:20px;">
-            <div class="hoverNav">
-              <a href="/shoppingList.html" class="navbarLinks">
-              <div class="shoppingList">Shopping List</div>
-              <i class="fa-solid fa-cart-shopping"></i>
-              </a>
+
+            <div class="recipeDiv">
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/egg-benedict.jpg" alt="eggs benedict">
+                </div>
+                <p class="bodyText"> Eggs Benedict</p>
+              </div>
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/omelette.jpg" alt="omelette">
+                </div>
+                  <p class="bodyText"> Omelette </p>
+              </div>
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/french-toast.jpg" alt="french toast">
+                </div>
+                <p class="bodyText"> French Toast </p>
+              </div>
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/souffle-pancake.jpg" alt="souffle pancake">
+                </div>
+                <p class="bodyText"> Souffle Pancake </p>
+              </div>
             </div>
-          </li>
-          <li style="margin-right:20px;">
-            <div class="hoverNav">
-              <a href="/mealPlan.html" class="navbarLinks">
-              <div class="mealPlan">Meal Plan</div>
-              <i class="fa-solid fa-pen-to-square"></i>
-              </a>
+          </div>
+
+          <div id="lunch-container">
+            <div class="mealBar">
+              <h2 class="mealTitle bodyText"> Lunch </h2>
+              <p class="viewMore bodyText"> View More </p>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- BREADCRUMB BAR -->
-    <div class="bcbar" id="toggleBcbar">
-      <div class="datetime-group bcbarText">
-        Current Date | Time: <span class="datetime" id="daydate"></span>, <span class="datetime" id="time"></span>
-      </div>
-      <div class="bcbar-right">
-        <ul>
-          <li class="float-right">
-            <div class="view-all-recipes">
-              <a class="special-border-a hoverBc" href="/viewAllRecipes.html">
-                <span class="special-border-span"></span>
-                <span class="breadcrumb-bar-right-text bcbarText"> View All Recipes </span>
-              </a>
+            <div class="recipeDiv">
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/oyakodon.jpg" alt="oyakodon">
+                </div>
+                <p class="bodyText"> Oyakodon </p>
+              </div>
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/pad-thai.jpg" alt="pad thai">
+                </div>
+                  <p class="bodyText"> Pad Thai </p>
+              </div>
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/korean-fried-chicken-kfc.jpg" alt="korean fried chicken">
+                </div>
+                <p class="bodyText"> Korean Fried Chicken </p>
+              </div>
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/uncle-roger-fried-rice.jpg" alt="uncle roger fried rice">
+                </div>
+                <p class="bodyText"> Uncle Roger Fried Rice </p>
+              </div>
             </div>
-          </li>
-          <li>
-            <div class="manage-recipes">
-              <a class="special-border-a hoverBc" href="/manageRecipes.html">
-                <span class="special-border-span"></span>
-                <span class="breadcrumb-bar-right-text bcbarText"> Manage Recipes </span>
-              </a>
+          </div>
+
+          <div id="dinner-container">
+            <div class="mealBar">
+              <h2 class="mealTitle bodyText"> Dinner </h2>
+              <p class="viewMore bodyText"> View More </p>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- FLEX CONTAINERS FOR RECIPES  -->
-    <div id="breakfast-container">
-      <div class="mealBar">
-        <h2 class="mealTitle bodyText"> Breakfast </h2>
-        <p class="viewMore bodyText"> View More </p>
-      </div>
+            <div class="recipeDiv">
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/shepherds-pie.jpg" alt="shepherd's pie">
+                </div>
+                <p class="bodyText"> Shepherd's Pie </p>
+              </div>
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/katsudon.jpg" alt="katsudon">
+                </div>
+                  <p class="bodyText"> Katsudon </p>
+              </div>
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/salmon-bake-rice.jpg" alt="salmon baked rice">
+                </div>
+                <p class="bodyText"> Salmon Baked Rice </p>
+              </div>
+              <div class="recipeCard">
+                <div class="imageZoom">
+                  <img src="images/lamb-stroganoff-w-pasta.jpg" alt="lamb stroganoff">
+                </div>
+                <p class="bodyText"> Lamb Stroganoff </p>
+              </div>
+            </div>
+          </div>
 
-      <div class="d-flex justify-content-around recipeDiv">
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/egg-benedict.jpg" alt="eggs benedict">
-          </div>
-          <p class="bodyText"> Eggs Benedict</p>
         </div>
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/omelette.jpg" alt="omelette">
-          </div>
-            <p class="bodyText"> Omelette </p>
-        </div>
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/french-toast.jpg" alt="french toast">
-          </div>
-          <p class="bodyText"> French Toast </p>
-        </div>
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/souffle-pancake.jpg" alt="souffle pancake">
-          </div>
-          <p class="bodyText"> Souffle Pancake </p>
-        </div>
-      </div>
-    </div>
 
-    <div id="lunch-container">
-      <div class="mealBar">
-        <h2 class="mealTitle bodyText"> Lunch </h2>
-        <p class="viewMore bodyText"> View More </p>
       </div>
 
-      <div class="d-flex justify-content-around recipeDiv">
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/oyakodon.jpg" alt="oyakodon">
-          </div>
-          <p class="bodyText"> Oyakodon </p>
-        </div>
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/pad-thai.jpg" alt="pad thai">
-          </div>
-            <p class="bodyText"> Pad Thai </p>
-        </div>
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/korean-fried-chicken-kfc.jpg" alt="korean fried chicken">
-          </div>
-          <p class="bodyText"> Korean Fried Chicken </p>
-        </div>
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/uncle-roger-fried-rice.jpg" alt="uncle roger fried rice">
-          </div>
-          <p class="bodyText"> Uncle Roger Fried Rice </p>
-        </div>
-      </div>
-    </div>
+      <!-- FOOTER SECTION -->
+      <footer id="elfooter">
+        <div class="footer-container">
+            <div class="footerDivs">
+              <span class="footerBENTO toggleFooterItemColour"> BENTO </span>
+              <div class="footerIconsMobile">
+                <i class="fa-solid fa-envelope toggleFooterItemColour"></i>
+                <i class="fa-brands fa-github toggleFooterItemColour"></i>
+                <i class="fa-brands fa-linkedin toggleFooterItemColour"></i>
+                <i class="fa-solid fa-question toggleFooterItemColour"></i>
+              </div>
+            </div>
+            <span id="verticalFooterLine" class=""> </span>
+            <div class="footerIcons">
+              <i class="fa-solid fa-envelope toggleFooterItemColour"></i>
+              <i class="fa-brands fa-github toggleFooterItemColour"></i>
+              <i class="fa-brands fa-linkedin toggleFooterItemColour"></i>
+              <i class="fa-solid fa-question toggleFooterItemColour"></i>
+            </div>
 
-    <div id="dinner-container">
-      <div class="mealBar">
-        <h2 class="mealTitle bodyText"> Dinner </h2>
-        <p class="viewMore bodyText"> View More </p>
+          <div class="footerTable">
+            <table>
+              <thead>
+                <tr class="footerTableRow">
+                  <th class="footerTitle toggleFooterItemColour">Home</th>
+                  <th class="footerTitle toggleFooterItemColour">Shopping List</th>
+                  <th class="footerTitle toggleFooterItemColour">Meal Plan</th>
+                  <th class="footerTitle toggleFooterItemColour">Recipes</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="footerTableRow">
+                  <td class="footerSubtitle toggleFooterItemColour">Breakfast</td>
+                  <td class="footerSubtitle toggleFooterItemColour">Edit Shopping List</td>
+                  <td class="footerSubtitle toggleFooterItemColour">Edit Meal Plan</td>
+                  <td class="footerSubtitle toggleFooterItemColour">Manage Recipes</td>
+                </tr>
+                <tr class="footerTableRow">
+                  <td class="footerSubtitle toggleFooterItemColour">Lunch</td>
+                  <td></td>
+                  <td></td>
+                  <td class="footerSubtitle toggleFooterItemColour">Create New Recipe</td>
+                </tr>
+                <tr class="footerTableRow">
+                  <td class="footerSubtitle toggleFooterItemColour">Dinner</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        
+          <div class="footer-accordion">
+            <div class="accordion-item">
+              <div class="accordion-item-header"> Home </div>
+              <div class="accordion-item-body">
+                <ul>
+                  <li> Breakfast </li>
+                  <li> Lunch </li>
+                  <li> Dinner </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-item-header"> Shopping List </div>
+              <div class="accordion-item-body">
+                <ul>
+                  <li> Edit Shopping List </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-item-header"> Meal Plan </div>
+              <div class="accordion-item-body">
+                <ul>
+                  <li> Edit Meal Plan </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-item-header"> Recipes </div>
+              <div class="accordion-item-body">
+                <ul>
+                  <li> Edit Recipes </li>
+                  <li> Create New Recipe </li>
+                </ul>
+              </div>
+            </div>
+          </div>
       </div>
 
-      <div class="d-flex justify-content-around recipeDiv">
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/shepherds-pie.jpg" alt="shepherd's pie">
-          </div>
-          <p class="bodyText"> Shepherd's Pie </p>
-        </div>
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/katsudon.jpg" alt="katsudon">
-          </div>
-            <p class="bodyText"> Katsudon </p>
-        </div>
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/salmon-bake-rice.jpg" alt="salmon baked rice">
-          </div>
-          <p class="bodyText"> Salmon Baked Rice </p>
-        </div>
-        <div class="recipeCard">
-          <div class="imageZoom">
-            <img src="images/lamb-stroganoff-w-pasta.jpg" alt="lamb stroganoff">
-          </div>
-          <p class="bodyText"> Lamb Stroganoff </p>
-        </div>
-      </div>
-
+      </footer>
     </div>
   </body>
-
-
-
-
-  <!-- FOOTER SECTION -->
-  <footer id="elfooter">
-    <div class="footer-container">
-      <div class="footerDivs">
-        <span class="footerBENTO"> BENTO </span>
-      </div>
-      <div class="footerIcons">
-        <i class="fa-solid fa-block-question"></i>
-        <i class="fa-brands fa-github"></i>
-        <!-- <img src="assets/icons/carmine-icons/github-carmine.png" width="40" height="40">
-        <img src="assets/icons/carmine-icons/block-question-carmine.png" width="40" height="40"> -->
-      </div>
-      <div class="footerDivs">
-        <span> Home </span>
-        <span> Breakfast </span>
-        <span> Lunch </span>
-        <span> Dinner </span>
-      </div>
-  </div>
-
-
-
-
-  </footer>
 
   <script type="text/javascript" src="js/script.js"></script>  <!-- import own script -->
   <script type="text/javascript" src="js/modeSwitch.js"></script>  <!-- import own script -->

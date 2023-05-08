@@ -36,8 +36,12 @@
 
 
 .special-border-a:hover::before,
-.special-border-a:hover::after,
-.special-border-a:hover span::before,
+.special-border-a:hover span::before {
+	width: calc(100% + 6px);
+	height: calc(100% + 6px);
+}
+
+/* .special-border-a:hover::after, */
 .special-border-a:hover span::after {
 	width: calc(100% + 6px);
 	height: calc(100% + 6px);

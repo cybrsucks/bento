@@ -1,11 +1,13 @@
 /* BCBAR */
 .bcbar {
 	z-index: 9;
-	padding: 5px;
+	padding: 0.4rem;
 	margin: auto;
 	font-size: 1.1em;
 	color: white;
 	display: flex;
+	position: relative;
+	width: calc(100vw - (100vw - 100%));  /* exclude scrollbar width , help from here: https://stackoverflow.com/questions/33606565/is-it-possible-to-calculate-the-viewport-width-vw-without-scrollbar*/
 	justify-content: space-between;
 }
 
@@ -36,10 +38,25 @@
 }
 
 .bcbar-right {
-	right: 200px;
+	padding-right: 30px;
 	position: relative;
 }
 
 .float-right {
 	margin-right: 40px;
+}
+
+/* ipad air dimensions */
+@media screen and (max-width: 840px) {
+	.bcbar {
+		z-index: 9;
+		padding: 0.4rem;
+		margin: auto;
+		font-size: 0.9em;
+		color: white;
+		display: flex;
+		position: relative;
+		width: calc(100vw - (100vw - 100%));  /* exclude scrollbar width , help from here: https://stackoverflow.com/questions/33606565/is-it-possible-to-calculate-the-viewport-width-vw-without-scrollbar*/
+		justify-content: space-between;
+	}
 }

@@ -41,3 +41,12 @@
 	background-image: url("/assets/backgroundImages/foodIconsNight.png");
 }
 
+/* footer items */
+.footerItemsNight {
+	color: #e3405b;
+}
+
+/* footer line */
+.verticalFooterLineNight {
+	border-left: 2px solid #e3405b;
+}

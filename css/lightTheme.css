@@ -39,3 +39,13 @@
 	background-color: #E0B3BA;
 	background-image: url("/assets/backgroundImages/foodIconsLight.png");
 }
+
+/* footer items */
+.footerItemsLight {
+	color: #960018;
+}
+
+/* footer line */
+.verticalFooterLineLight {
+	border-left: 2px solid #960018;
+}
