@@ -26,6 +26,9 @@ accordions.forEach(accordion => {
     accordion.addEventListener("click", function(event) {
         if (event.target.matches(".accordion-item-header")) {
 
+            var content = event.target.nextElementSibling;
+            content.style.display = "none";
+
             let active = this.querySelector(".accordionActive");
 
             if (active == event.target) {
@@ -46,6 +49,11 @@ accordions.forEach(accordion => {
 
                 var content = event.target.nextElementSibling;
                 content.style.display = "block";
+            }
+
+            if (!(event.target.classList.contains("accordionActive"))) {
+                var content = event.target.nextElementSibling;
+                content.style.display = "none";
             }
         }
     });
