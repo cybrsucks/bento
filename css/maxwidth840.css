@@ -14,15 +14,14 @@
 
 /* ipad air dimensions */
 @media screen and (max-width: 840px) {
-	.mealBar {
+	/* .mealBar {
 		display: flex;
 		padding: 5rem 3rem 0 3rem;
 		justify-content: space-between;
-	}
+	} */
 
 	.recipeCard, imageZoom img {
 		width: 9rem;
-		height: 9rem;
 	}
 
 	.imageZoom img {
@@ -32,9 +31,15 @@
 
 	.recipeCard p {
 		text-align: center;
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 		margin: 10px;
 		overflow-wrap: break-word;
+	}
+
+	.recipeDiv {
+		padding: 0.9rem 0.2rem;
+		display: flex!important;
+		justify-content: space-around!important;
 	}
 }
 
@@ -114,13 +119,14 @@
 	}
 
 	.footer-accordion{
+		box-shadow: 0 -3rem 2rem 0 #d9a1aa;
 		display: block;
 		width: 100%;
 		transition: 0.3s ease-in-out;
 	}
 
 	.accordion-item-header {
-		background-color: lightgrey;
+		background-color: #E0B3BA;
 		color: white;
 		cursor: pointer;
 		padding: 18px;
@@ -132,13 +138,17 @@
 	}
 
 	.accordionActive, .accordion-item-header:hover {
-		background-color: #555;
+		background-color: #ca7d89;
 	}
 	
 	.accordion-item-body {
 		padding: 0 18px;
 		display: none;
 		overflow: hidden;
-		background-color: #f1f1f1;
+		background-color: #d9a1aa;
+	}
+
+	.accordion-item, .accordion-item-header, .accordion-item-body {
+		transition: all 0.3s ease-in-out;
 	}
 }

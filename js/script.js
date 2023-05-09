@@ -36,6 +36,7 @@ accordions.forEach(accordion => {
 
                 var content = event.target.nextElementSibling;
                 content.style.display = "block";
+                content.style.transition = "all 0.5s ease-in-out;"
             } else {
                 //Remove current active.
                 if (active) {
@@ -49,6 +50,7 @@ accordions.forEach(accordion => {
 
                 var content = event.target.nextElementSibling;
                 content.style.display = "block";
+                content.style.transition = "all 0.5s ease-in-out;"
             }
 
             if (!(event.target.classList.contains("accordionActive"))) {

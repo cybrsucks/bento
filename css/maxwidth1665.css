@@ -1,5 +1,9 @@
 /* minimised window dimensions */
 @media screen and (max-width: 1665px) {
+	.recipeCard, imageZoom img {
+		width: 9rem;
+	}
+
 	.imageZoom img {
 		width: 9rem;
 		height: 9rem;
@@ -11,6 +15,7 @@
 		text-align: center;
 		font-size: 0.8rem;
 		margin: 10px;
+		overflow-wrap: break-word;
 	}
 
 	.recipeDiv {

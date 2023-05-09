@@ -83,6 +83,10 @@ i {
 
 /* my main screen dimensions */
 @media screen and (min-width: 1665px) {
+	.recipeCard, imageZoom img {
+		width: 14rem;
+	}
+
 	.imageZoom img {
 		width: 14rem;
 		height: 14rem;
@@ -94,9 +98,11 @@ i {
 		text-align: center;
 		font-size: 1.2rem;
 		margin: 10px;
+		overflow-wrap: break-word;
 	}
 
 	.recipeDiv {
+		
 		padding: 1.8rem 3.8rem;
 		display: flex!important;
 		justify-content: space-around!important;

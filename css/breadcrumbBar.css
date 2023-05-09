@@ -47,7 +47,7 @@
 }
 
 /* ipad air dimensions */
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 880px) {
 	.bcbar {
 		z-index: 9;
 		padding: 0.4rem;
