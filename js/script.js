@@ -18,52 +18,6 @@ var day_of_month = today.getDate();
 document.getElementById("daydate").innerHTML = day + ", " + month + " " + day_of_month
 
 
-/* collapsible function for footer on mobile devices */
-/* thanks to https://stackoverflow.com/questions/70371274/how-to-create-accordions-so-only-1-stays-open-at-a-time */
-const accordions = document.querySelectorAll(".footer-accordion");
-
-accordions.forEach(accordion => {
-    accordion.addEventListener("click", function(event) {
-        if (event.target.matches(".accordion-item-header")) {
-
-            var content = event.target.nextElementSibling;
-            content.style.display = "none";
-
-            let active = this.querySelector(".accordionActive");
-
-            if (active == event.target) {
-                event.target.classList.toggle("accordionActive");
-
-                var content = event.target.nextElementSibling;
-                content.style.display = "block";
-                content.style.transition = "all 0.5s ease-in-out;"
-            } else {
-                //Remove current active.
-                if (active) {
-                    active.classList.remove("accordionActive");
-
-                    var content = active.nextElementSibling;
-                    content.style.display = "none";
-                }
-                //Add active        
-                event.target.classList.add("accordionActive");
-
-                var content = event.target.nextElementSibling;
-                content.style.display = "block";
-                content.style.transition = "all 0.5s ease-in-out;"
-            }
-
-            if (!(event.target.classList.contains("accordionActive"))) {
-                var content = event.target.nextElementSibling;
-                content.style.display = "none";
-            }
-        }
-    });
-});
-
-
-
-
 // MODE SWITCH
 
 const toggleBtn = document.getElementById("toggle-btn");
@@ -257,12 +211,70 @@ if (lightMode == "disabled") {
 }
 
 toggleBtn.addEventListener("click", (e) => {
+    window.location.reload();  // important to refresh page so footer active accordion does not save state of previous mode
     lightMode = localStorage.getItem("lightMode"); // update lightMode when clicked
     if (lightMode === "disabled") {
         enableLightMode();
     } else {
         disableLightMode();
     }
+});
+
+
+
+/* collapsible function for footer on mobile devices */
+/* thanks to https://stackoverflow.com/questions/70371274/how-to-create-accordions-so-only-1-stays-open-at-a-time */
+const accordions = document.querySelectorAll(".footer-accordion");
+const modeLight = localStorage.getItem("lightMode");
+
+accordions.forEach(accordion => {
+    accordion.addEventListener("click", function(event) {
+        if (event.target.matches(".accordion-item-header")) {
+
+            var content = event.target.nextElementSibling;
+            content.style.display = "none";
+
+            let active = this.querySelector(".accordionActive");
+
+            if (active == event.target) {
+                event.target.classList.toggle("accordionActive");
+
+                event.target.style.backgroundColor = '';  // if accordion title clicked = already active accordion, reset back to original backgroundColor
+
+                var content = event.target.nextElementSibling;
+                content.style.display = "block";
+                content.style.transition = "all 0.5s ease-in-out;"
+
+            } else {
+                //Remove current active.
+                if (active) {
+                    active.classList.remove("accordionActive");
+
+                    active.style.backgroundColor = '';  // reset any active accordions back to original backgroundColor
+
+                    var content = active.nextElementSibling;
+                    content.style.display = "none";
+                }
+                //Add active        
+                event.target.classList.add("accordionActive");
+
+                if (modeLight == "enabled") {
+                    event.target.style.backgroundColor = '#ca7d89';
+                }else{
+                    event.target.style.backgroundColor = '#404040';
+                }
+
+                var content = event.target.nextElementSibling;
+                content.style.display = "block";
+                content.style.transition = "all 0.5s ease-in-out;"
+            }
+
+            if (!(event.target.classList.contains("accordionActive"))) {
+                var content = event.target.nextElementSibling;
+                content.style.display = "none";
+            }
+        }
+    });
 });
 
 
