@@ -145,7 +145,7 @@ i {
 	text-align: center;
 }
 
-.mealTitle {
+.mealTitle, .recipeTitle {
 	display: inline;
 }
 
@@ -329,7 +329,7 @@ i {
 		font-size: 1.2rem;
 	}
 
-	.footer-accordion{
+	#footer-accordion{
 		display: none;
 	}
 
@@ -409,7 +409,7 @@ i {
 		font-size: 0.8rem;
 	}
 
-	.footer-accordion{
+	#footer-accordion{
 		display: none;
 	}
 
@@ -491,16 +491,27 @@ i {
 		display: none;
 	}
 
-	.footer-accordion{
+	#footer-accordion {
+		display: block;
+	}
+
+	.footer-accordionLight {
 		box-shadow: 0 -3rem 2rem 0 #d9a1aa;
 		display: block;
 		width: 100%;
 		transition: 0.3s ease-in-out;
 	}
 
+	.footer-accordionNight {
+		box-shadow: 0 -2rem 2rem 18px #606060;
+		display: block;
+		width: 100%;
+		transition: 0.3s ease-in-out;
+	}
+
 	.accordion-item-header {
-		background-color: #E0B3BA;
-		color: white;
+		/* background-color: #E0B3BA;
+		color: white; */
 		cursor: pointer;
 		padding: 18px;
 		width: 100%;
@@ -510,8 +521,22 @@ i {
 		font-size: 15px;
 	}
 
-	.accordionActive, .accordion-item-header:hover {
+	.accordionItemHeaderLight {
+		background-color: #E0B3BA;
+		color: white;
+	}
+
+	.accordionItemHeaderNight {
+		background-color: #505050;
+		color: white;
+	}
+
+	.accordionItemHeaderLight:hover {
 		background-color: #ca7d89;
+	}
+
+	.accordionItemHeaderNight:hover {
+		background-color: #404040;
 	}
 	
 	.accordion-item-body {

@@ -83,9 +83,16 @@ const bodyText = document.getElementsByClassName("bodyText");
 const footer = document.getElementById("elfooter");
 const footerItems = document.getElementsByClassName("toggleFooterItemColour");
 
+const accordionItemHeader = document.getElementsByClassName("accordion-item-header");
+const footerAccordion = document.getElementById("footer-accordion");
+
 const footerLine = document.getElementById("verticalFooterLine");
 
+
+
 let lightMode = localStorage.getItem("lightMode");
+
+
 
 const enableLightMode = () => {
     noBodynoBodybutYou.classList.add("lightBody")
@@ -140,11 +147,23 @@ const enableLightMode = () => {
         footerItems[i].classList.remove("footerItemsNight")
     }   
 
+
     /* Footer Line */
     footerLine.classList.add("verticalFooterLineLight");
     footerLine.classList.remove("verticalFooterLineNight");
 
-    
+
+    /* Mobile Footer Accordion Colour */ 
+    for (var i=0; i< accordionItemHeader.length; i++) {
+        accordionItemHeader[i].classList.add('accordionItemHeaderLight');
+        accordionItemHeader[i].classList.remove('accordionItemHeaderNight');
+    }  
+
+
+    /* Footer Accordion */
+    footerAccordion.classList.add("footer-accordionLight");
+    footerAccordion.classList.remove("footer-accordionNight");
+
     /* Set localStorage value */
     localStorage.setItem("lightMode", "enabled");
 };
@@ -208,6 +227,18 @@ const disableLightMode = () => {
     /* Footer Line */
     footerLine.classList.add("verticalFooterLineNight");
     footerLine.classList.remove("verticalFooterLineLight");
+
+
+    /* Mobile Footer Accordion Colour */ 
+    for (var i=0; i< accordionItemHeader.length; i++) {
+        accordionItemHeader[i].classList.add('accordionItemHeaderNight');
+        accordionItemHeader[i].classList.remove('accordionItemHeaderLight');
+    }   
+
+
+    /* Footer Accordion */
+    footerAccordion.classList.add("footer-accordionNight");
+    footerAccordion.classList.remove("footer-accordionLight");
 
 
     /* Set localStorage value */
