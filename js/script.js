@@ -240,7 +240,8 @@ accordions.forEach(accordion => {
                 event.target.classList.toggle("accordionActive");
 
                 event.target.style.backgroundColor = '';  // if accordion title clicked = already active accordion, reset back to original backgroundColor
-
+                event.target.style.textDecoration = 'none';
+                
                 var content = event.target.nextElementSibling;
                 content.style.display = "block";
                 content.style.transition = "all 0.5s ease-in-out;"
@@ -251,6 +252,7 @@ accordions.forEach(accordion => {
                     active.classList.remove("accordionActive");
 
                     active.style.backgroundColor = '';  // reset any active accordions back to original backgroundColor
+                    active.style.textDecoration = 'none';
 
                     var content = active.nextElementSibling;
                     content.style.display = "none";
@@ -260,8 +262,10 @@ accordions.forEach(accordion => {
 
                 if (modeLight == "enabled") {
                     event.target.style.backgroundColor = '#ca7d89';
+                    event.target.style.textDecoration = 'underline';
                 }else{
                     event.target.style.backgroundColor = '#404040';
+                    event.target.style.textDecoration = 'underline';
                 }
 
                 var content = event.target.nextElementSibling;
