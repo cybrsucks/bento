@@ -222,8 +222,8 @@ i {
 	
 	.mobile-nav.is-active {
 		transition: .4s;
-		width: 80%;
-		min-height: 100vh;
+		width: 60%;
+		min-height: 100%;
 		z-index: 9;
 		position: absolute;
 	}
