@@ -25,7 +25,6 @@
               HOME <i class="fa-solid fa-house"></i>
             </a>
           </div>
-
           <div class="navbar-right">
             <ul>
               <li style="margin:auto;">
@@ -35,25 +34,7 @@
                   </label>
                 </div>
               </li>
-
-              <li style="padding-right: 20px;">
-                <div class="hamburger">
-                  <div class="bar"></div>
-                </div>
-
-                <div class="mobile-nav">
-                  <a href="/shoppingList.html" class=""> Shopping List
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </a>
-                  <a href="/mealPlan.html" class=""> Meal Plan
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </a>
-                </div>
-              </li>
-
-
-
-              <li class="rightLinks" style="padding-right:20px;">
+              <li style="padding-right:20px;">
                 <div class="hoverNav">
                   <a href="/shoppingList.html" class="navbarLinks">
                   <div class="shoppingList">Shopping List</div>
@@ -61,7 +42,7 @@
                   </a>
                 </div>
               </li>
-              <li class="rightLinks" style="padding-right:20px;">
+              <li style="padding-right:20px;">
                 <div class="hoverNav">
                   <a href="/mealPlan.html" class="navbarLinks">
                   <div class="mealPlan">Meal Plan</div>
@@ -71,23 +52,38 @@
               </li>
             </ul>
           </div>
-
         </div>
 
         <!-- BREADCRUMB BAR -->
         <div class="bcbar" id="toggleBcbar">
-          <div class="datetime-group bcbarText" style="display: none;">
+          <div class="datetime-group bcbarText">
             Current Date | Time: <span class="datetime" id="daydate"></span>, <span class="datetime" id="time"></span>
           </div>
-          <div class="datetime-group bcbarText">
-            Home > View All Recipes
+          <div class="bcbar-right">
+            <ul>
+              <li class="float-right">
+                <div class="view-all-recipes">
+                  <a class="special-border-a hoverBc" href="/viewAllRecipes.html">
+                    <span class="special-border-span"></span>
+                    <span class="breadcrumb-bar-right-text bcbarText"> View All Recipes </span>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="manage-recipes">
+                  <a class="special-border-a hoverBc" href="/manageRecipes.html">
+                    <span class="special-border-span"></span>
+                    <span class="breadcrumb-bar-right-text bcbarText"> Manage Recipes </span>
+                  </a>
+                </div>
+              </li>
+            </ul>
           </div>
-
         </div>
 
         <div class="pageContent">
           <div class="mealBar">
-            <h2 class="recipeTitle bodyText"> All Recipes </h2>
+            <h2 class="recipeTitle bodyText"> Manage Recipes </h2>
           </div>
           <div class="recipeDiv">
             <div class="recipeCard">

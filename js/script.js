@@ -18,6 +18,31 @@ var day_of_month = today.getDate();
 document.getElementById("daydate").innerHTML = day + ", " + month + " " + day_of_month
 
 
+
+
+
+const menu_btn = document.querySelector('.hamburger');
+const mobile_menu = document.querySelector('.mobile-nav');
+
+menu_btn.addEventListener('click', function () {
+    menu_btn.classList.toggle('is-active');
+    mobile_menu.classList.toggle('is-active');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // MODE SWITCH
 
 const toggleBtn = document.getElementById("toggle-btn");
@@ -40,6 +65,10 @@ const footerItems = document.getElementsByClassName("toggleFooterItemColour");
 const accordionItemHeader = document.getElementsByClassName("accordion-item-header");
 const footerAccordion = document.getElementById("footer-accordion");
 
+const mobileNav = document.getElementById("mobile-nav");
+const mobileNavLinks = document.getElementsByClassName("mobile-navA");
+
+
 const footerLine = document.getElementById("verticalFooterLine");
 
 
@@ -61,6 +90,18 @@ const enableLightMode = () => {
     for (var i=0; i< navbarLinks.length; i++) {
         navbarLinks[i].classList.add("navbarLightA")
         navbarLinks[i].classList.remove("navbarNightA")
+    }
+
+
+    /* Mobile Navigation Side Menu Bar */
+    mobileNav.classList.add("mobile-navLight");
+    mobileNav.classList.remove("mobile-navNight");
+
+
+    /* Mobile Navigation Side Menu Bar Navigation Links */
+    for (var i=0; i< mobileNavLinks.length; i++) {
+        mobileNavLinks[i].classList.add("mobile-navALight")
+        mobileNavLinks[i].classList.remove("mobile-navANight")
     }
 
 
@@ -137,6 +178,17 @@ const disableLightMode = () => {
     for (var i=0; i< navbarLinks.length; i++) {
         navbarLinks[i].classList.add("navbarNightA")
         navbarLinks[i].classList.remove("navbarLightA")
+    }
+
+    /* Mobile Navigation Side Menu Bar */
+    mobileNav.classList.add("mobile-navNight");
+    mobileNav.classList.remove("mobile-navLight");
+
+
+    /* Mobile Navigation Side Menu Bar Navigation Links */
+    for (var i=0; i< mobileNavLinks.length; i++) {
+        mobileNavLinks[i].classList.add("mobile-navANight")
+        mobileNavLinks[i].classList.remove("mobile-navALight")
     }
 
 
