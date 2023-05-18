@@ -12,45 +12,11 @@
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"/>  <!-- import bootstrap -->
     <script src="https://kit.fontawesome.com/fe5f501db5.js" crossorigin="anonymous"></script>  <!-- import fontawesome icons -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />  <!-- import own stylesheet -->
     <title>BENTO: Meal Planner</title>
   </head>
   <body id="noBodynoBodybutYou">
-    <div id="windowWarning">
-      <div>
-        <p> Rotate your device orientation for better experience. </p>
-        <img src="images\phone_turn.gif">
-      </div>
-    </div>
     <div id="page-container">
-
-      <!-- MOBILE NAVIGATION BAR -->
-      <div class="mobile-nav" id="mobile-nav">
-        <a href="/index.html" class="mobile-navA"> 
-          <i class="fa-solid fa-house"></i>
-          <span>Home</span>
-        </a>
-        <a href="/shoppingList.html" class="mobile-navA">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <span>Shopping List</span>
-        </a>
-        <a href="/mealPlan.html" class="mobile-navA">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <span>Meal Plan</span>
-        </a>
-        <br><br>
-        <a href="/viewAllRecipes.html" class="mobile-navA">
-          <i class="fa-solid fa-apple-whole"></i>
-          <span>View All Recipes</span>
-        </a>
-        <a href="/manageRecipes.html" class="mobile-navA">
-          <i class="fa-solid fa-pizza-slice"></i>
-          <span>Manage Recipes</span>
-        </a>
-      </div>
-      
-      <div class="backdrop" id="backdrop"></div> <!-- backdrop for mobile-nav -->
-
       <div id="content-wrap">
         <!-- NAVIGATION BAR -->
         <div class="navbar" id="toggleNavbar">
@@ -70,15 +36,23 @@
                 </div>
               </li>
 
-
-              <!-- Mobile Dimensions, Hamburger Menu -->
               <li style="padding-right: 20px;">
                 <div class="hamburger">
                   <div class="bar"></div>
                 </div>
+
+                <div class="mobile-nav">
+                  <a href="/shoppingList.html" class=""> Shopping List
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a href="/mealPlan.html" class=""> Meal Plan
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                </div>
               </li>
 
-              <!-- PC Dimensions -->
+
+
               <li class="rightLinks" style="padding-right:20px;">
                 <div class="hoverNav">
                   <a href="/shoppingList.html" class="navbarLinks">
@@ -102,29 +76,13 @@
 
         <!-- BREADCRUMB BAR -->
         <div class="bcbar" id="toggleBcbar">
-          <div class="datetime-group bcbarText">
+          <div class="datetime-group bcbarText" style="display: none;">
             Current Date | Time: <span class="datetime" id="daydate"></span>, <span class="datetime" id="time"></span>
           </div>
-          <div class="bcbar-right">
-            <ul>
-              <li class="float-right">
-                <div class="view-all-recipes">
-                  <a class="special-border-a hoverBc" href="/viewAllRecipes.html">
-                    <span class="special-border-span"></span>
-                    <span class="breadcrumb-bar-right-text bcbarText"> View All Recipes </span>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="manage-recipes">
-                  <a class="special-border-a hoverBc" href="/manageRecipes.html">
-                    <span class="special-border-span"></span>
-                    <span class="breadcrumb-bar-right-text bcbarText"> Manage Recipes </span>
-                  </a>
-                </div>
-              </li>
-            </ul>
+          <div class="datetime-group bcbarText">
+            Home > View All Recipes
           </div>
+
         </div>
 
         <div class="pageContent">
@@ -132,7 +90,6 @@
             <h2 class="recipeTitle bodyText"> All Recipes </h2>
           </div>
           <div class="recipeDiv">
-
             <div class="recipeCard">
               <div class="imageZoom">
                 <img src="images/sweet-soy-chicken-w-edamame-rice.jpg" alt="sweet soy chicken w edamame rice">
@@ -153,21 +110,15 @@
             </div>
             <div class="recipeCard">
               <div class="imageZoom">
-                <img src="images/indomee.jpg" alt="indomee">
-              </div>
-              <p class="bodyText"> Secret Indomee Recipe </p>
-            </div>
-
-          </div>
-
-          <div class="recipeDiv">
-
-            <div class="recipeCard">
-              <div class="imageZoom">
                 <img src="images/salmon-bake-rice.jpg" alt="salmon baked rice">
               </div>
               <p class="bodyText"> Salmon Baked Rice </p>
             </div>
+          </div>
+
+
+        <div class="pageContent">
+          <div class="recipeDiv">
             <div class="recipeCard">
               <div class="imageZoom">
                 <img src="images/rosti.jpg" alt="rosti">
@@ -178,7 +129,7 @@
               <div class="imageZoom">
                 <img src="images/quesadilla.jpg" alt="quesadilla">
               </div>
-                <p class="bodyText"> Quesadillas </p>
+                <p class="bodyText"> Quesadilla </p>
             </div>
             <div class="recipeCard">
               <div class="imageZoom">
@@ -186,18 +137,16 @@
               </div>
               <p class="bodyText"> Popcorn Chicken </p>
             </div>
-
-          </div>
-
-
-          <div class="recipeDiv">
-
             <div class="recipeCard">
               <div class="imageZoom">
                 <img src="images/pad-thai.jpg" alt="pad thai">
               </div>
               <p class="bodyText"> Pad Thai </p>
             </div>
+          </div>
+
+
+          <div class="recipeDiv">
             <div class="recipeCard">
               <div class="imageZoom">
                 <img src="images/oyakodon.jpg" alt="oyakodon">
@@ -212,16 +161,20 @@
             </div>
             <div class="recipeCard">
               <div class="imageZoom">
+                <img src="images/lasagna.jpg" alt="beef lasagna">
+              </div>
+              <p class="bodyText"> Beef Lasagna </p>
+            </div>
+            <div class="recipeCard">
+              <div class="imageZoom">
                 <img src="images/lamb-stroganoff-w-pasta.jpg" alt="lamb stroganoff">
               </div>
               <p class="bodyText"> Lamb Stroganoff </p>
             </div>
-
           </div>
 
 
           <div class="recipeDiv">
-
             <div class="recipeCard">
               <div class="imageZoom">
                 <img src="images/korean-fried-chicken-kfc.jpg" alt="korean fried chicken">
@@ -236,22 +189,26 @@
             </div>
             <div class="recipeCard">
               <div class="imageZoom">
+                <img src="images/indomee.jpg" alt="indomee">
+              </div>
+              <p class="bodyText"> Secret Indomee Recipe </p>
+            </div>
+            <div class="recipeCard">
+              <div class="imageZoom">
                 <img src="images/french-toast.jpg" alt="french toast">
               </div>
               <p class="bodyText"> French Toast </p>
             </div>
+          </div>
+
+
+          <div class="recipeDiv">
             <div class="recipeCard">
               <div class="imageZoom">
                 <img src="images/egg-benedict.jpg" alt="eggs benedict">
               </div>
               <p class="bodyText"> Eggs Benedict</p>
             </div>
-
-          </div>
-
-
-          <div class="recipeDiv">
-
             <div class="recipeCard">
               <div class="imageZoom">
                 <img src="images/crispy-chicken-tacos.jpg" alt="crispy chicken tacos">
@@ -270,18 +227,16 @@
               </div>
               <p class="bodyText"> Chocolate Shake </p>
             </div>
+          </div>
+
+
+          <div class="recipeDiv">
             <div class="recipeCard">
               <div class="imageZoom">
                 <img src="images/chessy-taco-melts.jpg" alt="cheesy taco melts">
               </div>
               <p class="bodyText"> Cheesy Taco Melts </p>
             </div>
-
-          </div>
-
-
-          <div class="recipeDiv">
-
             <div class="recipeCard">
               <div class="imageZoom">
                 <img src="images/carbonara.jpg" alt="bacon carbonara">
@@ -296,18 +251,13 @@
             </div>
             <div class="recipeCard">
               <div class="imageZoom">
-                <img src="images/lasagna.jpg" alt="beef lasagna">
-              </div>
-              <p class="bodyText"> Beef Lasagna </p>
-            </div>
-            <div class="recipeCard">
-              <div class="imageZoom">
                 <img src="images/apple-pie.jpg" alt="apple pie">
               </div>
               <p class="bodyText"> Apple Pie </p>
             </div>
-
           </div>
+
+
         </div>
 
       </div>
@@ -345,19 +295,19 @@
 
               <tbody>
                 <tr class="footerTableRow">
-                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/breakfastRecipes.html" class="footerLinks"> Breakfast Recipes </a></td>
-                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/editShoppingList.html" class="footerLinks"> Edit Shopping List </a></td>
-                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/editMealPlan.html" class="footerLinks"> Edit Meal Plan </a></td>
-                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/manageRecipes.html" class="footerLinks"> Manage Recipes </a></td>
+                  <td class="footerSubtitle toggleFooterItemColour">Breakfast</td>
+                  <td class="footerSubtitle toggleFooterItemColour">Edit Shopping List</td>
+                  <td class="footerSubtitle toggleFooterItemColour">Edit Meal Plan</td>
+                  <td class="footerSubtitle toggleFooterItemColour">Manage Recipes</td>
                 </tr>
                 <tr class="footerTableRow">
-                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/lunchRecipes.html" class="footerLinks"> Lunch Recipes</a></td>
+                  <td class="footerSubtitle toggleFooterItemColour">Lunch</td>
                   <td></td>
                   <td></td>
-                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/mkrec.html" class="footerLinks"> Create New Recipe </a></td>
+                  <td class="footerSubtitle toggleFooterItemColour">Create New Recipe</td>
                 </tr>
                 <tr class="footerTableRow">
-                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/dinnerRecipes.html" class="footerLinks"> Dinner Recipes</a></td>
+                  <td class="footerSubtitle toggleFooterItemColour">Dinner</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -369,41 +319,40 @@
         
           <div id="footer-accordion" class="footer-accordion">
             <div class="accordion-item">
-              <div class="accordion-item-header accordionText"> Home </div>
+              <div class="accordion-item-header"> Home </div>
               <div class="accordion-item-body">
                 <ul>
-                  <a href="/breakfastRecipes.html"> <li class="accordionText"> Breakfast </li> </a>
-                  <a href="/lunchRecipes.html"> <li class="accordionText"> Lunch </li> </a>
-                  <a href="/dinnerRecipes.html"> <li class="accordionText"> Dinner </li> </a>
+                  <li> Breakfast </li>
+                  <li> Lunch </li>
+                  <li> Dinner </li>
                 </ul>
               </div>
             </div>
 
             <div class="accordion-item">
-              <div class="accordion-item-header accordionText"> Shopping List </div>
+              <div class="accordion-item-header"> Shopping List </div>
               <div class="accordion-item-body">
-                <ul>
-                  <a href="/editShoppingList.html"> <li class="accordionText"> Edit Shopping List </li> </a>
+                <ul> 
+                  <li> Edit Shopping List </li>
                 </ul>
               </div>
             </div>
 
             <div class="accordion-item">
-              <div class="accordion-item-header accordionText"> Meal Plan </div>
+              <div class="accordion-item-header"> Meal Plan </div>
               <div class="accordion-item-body">
                 <ul>
-                  <a href="/editMealPlan.html"> <li class="accordionText"> Edit Meal Plan </li> </a>
+                  <li> Edit Meal Plan </li>
                 </ul>
               </div>
             </div>
 
             <div class="accordion-item">
-              <div class="accordion-item-header accordionText"> Recipes </div>
+              <div class="accordion-item-header"> Recipes </div>
               <div class="accordion-item-body">
                 <ul>
-                  <a href="/viewAllRecipes.html"> <li class="accordionText"> View All Recipes </li> </a>
-                  <a href="/manageRecipes.html"> <li class="accordionText"> Manage Recipes </li> </a>
-                  <a href="/mkrec.html"> <li class="accordionText"> Create A New Recipe </li> </a>
+                  <li> Edit Recipes </li>
+                  <li> Create New Recipe </li>
                 </ul>
               </div>
             </div>
@@ -415,6 +364,5 @@
   </body>
 
   <script type="text/javascript" src="js/script.js"></script>  <!-- import own script -->
-  <!-- <script type="text/javascript" src="js/modeSwitch.js"></script>  import own script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script> <!-- import bootstrap -->
 </html>

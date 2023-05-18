@@ -430,6 +430,12 @@ li {
 	}
 }
 
+@media screen and (max-width: 840px) {
+	.minimisedMobile {
+		display: none;
+	}
+}
+
 /* for screens ~px to 720px wide -- samsung note 9 dimensions */
 @media screen and (max-width: 720px) { 
 	.recipeCard, imageZoom img {
@@ -456,6 +462,10 @@ li {
 
 	.viewMore {
 		margin: auto 0 auto 0;
+	}
+
+	.minimisedMobile {
+		display: none;
 	}
 }
 /* end of BODY CONTENT: RECIPES */
