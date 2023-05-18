@@ -51,17 +51,20 @@ const hoverBc = document.getElementsByClassName("hoverBc");
 
 const bodyText = document.getElementsByClassName("bodyText");
 
+/* footer */
 const footer = document.getElementById("elfooter");
 const footerItems = document.getElementsByClassName("toggleFooterItemColour");
+const footerLine = document.getElementById("verticalFooterLine");
 
+/* mobile footer accordion */
 const accordionItemHeader = document.getElementsByClassName("accordion-item-header");
 const footerAccordion = document.getElementById("footer-accordion");
+const accordionText = document.getElementsByClassName("accordionText");
+const footerLinks = document.getElementsByClassName("footerLinks");
 
+/* mobile right-side menu navbar */
 const mobileNav = document.getElementById("mobile-nav");
 const mobileNavLinks = document.getElementsByClassName("mobile-navA");
-
-
-const footerLine = document.getElementById("verticalFooterLine");
 
 
 
@@ -151,6 +154,20 @@ const enableLightMode = () => {
     footerAccordion.classList.add("footer-accordionLight");
     footerAccordion.classList.remove("footer-accordionNight");
 
+
+    /* Footer Accordion Text */
+    for (var i=0; i< accordionText.length; i++) {
+        accordionText[i].classList.add("accordionTextLight");
+        accordionText[i].classList.remove("accordionTextNight");
+    }
+
+    /* Footer Accordion Text */
+    for (var i=0; i< footerLinks.length; i++) {
+        footerLinks[i].classList.add("footerLinksLight");
+        footerLinks[i].classList.remove("footerLinksNight");
+    }
+
+
     /* Set localStorage value */
     localStorage.setItem("lightMode", "enabled");
 };
@@ -239,6 +256,20 @@ const disableLightMode = () => {
     footerAccordion.classList.remove("footer-accordionLight");
 
 
+    /* Footer Accordion Text */
+    for (var i=0; i< accordionText.length; i++) {
+        accordionText[i].classList.add("accordionTextNight");
+        accordionText[i].classList.remove("accordionTextLight");
+    }
+
+
+    /* Footer Accordion Text */
+    for (var i=0; i< footerLinks.length; i++) {
+        footerLinks[i].classList.add("footerLinksNight");
+        footerLinks[i].classList.remove("footerLinksLight");
+    }
+
+
     /* Set localStorage value */
     localStorage.setItem("lightMode", "disabled");
 };
@@ -308,7 +339,7 @@ accordions.forEach(accordion => {
                     event.target.style.backgroundColor = '#ca7d89';
                     event.target.style.textDecoration = 'underline';
                 }else{
-                    event.target.style.backgroundColor = '#404040';
+                    event.target.style.backgroundColor = '#292924';
                     event.target.style.textDecoration = 'underline';
                 }
 
