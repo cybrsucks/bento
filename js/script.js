@@ -66,6 +66,17 @@ const footerLinks = document.getElementsByClassName("footerLinks");
 const mobileNav = document.getElementById("mobile-nav");
 const mobileNavLinks = document.getElementsByClassName("mobile-navA");
 
+/* manage recipes */
+const recipeFlexBox = document.getElementsByClassName("recipeEntry");
+
+
+
+
+
+
+
+
+
 
 
 let lightMode = localStorage.getItem("lightMode");
