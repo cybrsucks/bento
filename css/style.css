@@ -304,6 +304,14 @@ li {
 	margin-right: 40px;
 }
 
+.breadcrumb-Text {
+	color: white;
+}
+
+.breadcrumb-Text:hover {
+	color: lightgrey;
+}
+
 @media screen and (max-width: 880px) {
 	/* ipad air dimensions */
 	.bcbar {
@@ -468,6 +476,65 @@ li {
 		display: none;
 	}
 }
+
+
+
+/* manage recipes */
+
+.container-list {
+	padding-top: 1.8rem;
+	width: 80%;
+	/* text-align: center; */
+	margin: auto;
+	font-size: 1.5rem;
+}
+
+.recipeEntry {
+	background-color: grey;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 2rem;;
+}
+
+.recipeEntry p {
+	margin: auto;
+}
+
+.recipeEntry span {
+	margin: auto;
+}
+
+.imageEntry {
+	width: 6rem;
+	height: 6rem;
+	margin: 1rem 3rem 1rem 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* end of BODY CONTENT: RECIPES */
 
 
