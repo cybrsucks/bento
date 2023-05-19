@@ -481,11 +481,7 @@ li {
 
 
 
-
-
-
 /* manage recipes */
-
 .container-list {
 	width: 80rem;
 	padding-top: 1.8rem;
@@ -581,7 +577,144 @@ li {
 
 
 
+/* modal container for editing recipes */
+.editRecipeModal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 10; /* Sit on top */
+	/* padding-top: 100px; Location of the box */
+	padding: 3rem 0;
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+.editRecipeModalContent {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	background-color: #E0B3BA;
+	margin: auto;
+	padding: 2.1rem 2rem;
+	width: 35rem;
+	height: auto;
+	border-radius: 24px;
+	border: 2px solid #960018;
+}
+
+.close {
+	display: none;
+	color: #e3405b;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #E8667B;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modalTitle {
+	color: #960018;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.modalHoriLine {
+	border-top: 3px solid #960018;
+	width: 28rem;
+    margin: auto;
+}
+
+.modalContentDiv {
+	padding-top: 3rem;
+}
+
+.modalRecipeInfoFlex {
+	justify-content: center;
+	display: flex;
+	margin: auto;
+	width: 24rem;
+	padding-bottom: 2rem;
+}
+
+.modalRecipeLabel {
+	color: #960018;
+	padding-left: 1rem;
+	width: 10rem;
+	margin: 0;
+}
+
+.modalField {
+	width: 14rem;
+	padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+	color: #960018;
+	border-radius: 0.2rem;
+	border: 1px solid #960018;
+}	
+
+.modalField:focus{
+	box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 0.2rem;
+	background-color: #f9f9f9;
+	/* outline: 1px solid #960018; */
+	outline: none;
+}
+
+
+.modalRecipeField {
+	margin: 0;
+	font-size: 1.1rem;
+}
+
+.modalIngredient {
+	display: flex;
+	width: 14rem;
+	padding-bottom: 0.8rem;
+}
+
+.modalRecipeFieldMsr {
+	width: 5rem;
+}
+
+.modalRecipeFieldIngrName{
+	margin-left: 1rem;
+	width: 8rem;
+}
+
+.modalRecipeIngredientList {
+	display: block;
+}
+
+.removeRecipeBtn {
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	text-transform: uppercase;
+	font-size: 1rem;
+	color: #960018;
+	width: 12rem;
+	padding: 1rem;
+	text-align: center;
+	margin: auto;
+	background-color: #ca7d89;
+}
+
+.removeRecipeBtn:hover {
+	background-color: #960018;
+	transition: .3s ease-in-out;
+	color: white;
+}
+
+.clicktoClose {
+	display: block;
+	font-size: 1rem;
+	margin: auto;
+	text-align: center;
+	color: #767676;
+	padding-top: 1rem;
+}
 
 
 
