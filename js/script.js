@@ -68,6 +68,8 @@ const mobileNavLinks = document.getElementsByClassName("mobile-navA");
 
 /* manage recipes */
 const recipeFlexBox = document.getElementsByClassName("recipeEntry");
+const recipeEdit = document.getElementsByClassName("recipeEntryTwoHalf");
+const divideLine = document.getElementsByClassName("editDivideLine");
 
 
 
@@ -178,6 +180,24 @@ const enableLightMode = () => {
         footerLinks[i].classList.remove("footerLinksNight");
     }
 
+    /* manage recipes */
+    for (var i=0; i< recipeFlexBox.length; i++) {
+        recipeFlexBox[i].classList.add("recipeEntryLight");
+        recipeFlexBox[i].classList.remove("recipeEntryNight");
+    }
+
+
+    for (var i=0; i< recipeEdit.length; i++) {
+        recipeEdit[i].classList.add("recipeEntryEditLight");
+        recipeEdit[i].classList.remove("recipeEntryEditNight");
+    }
+
+
+    for (var i=0; i< divideLine.length; i++) {
+        divideLine[i].classList.add("editDivideLineLight");
+        divideLine[i].classList.remove("editDivideLineNight");
+    }
+
 
     /* Set localStorage value */
     localStorage.setItem("lightMode", "enabled");
@@ -278,6 +298,24 @@ const disableLightMode = () => {
     for (var i=0; i< footerLinks.length; i++) {
         footerLinks[i].classList.add("footerLinksNight");
         footerLinks[i].classList.remove("footerLinksLight");
+    }
+
+
+    /* manage recipes */
+    for (var i=0; i< recipeFlexBox.length; i++) {
+        recipeFlexBox[i].classList.add("recipeEntryNight");
+        recipeFlexBox[i].classList.remove("recipeEntryLight");
+    }
+
+
+    for (var i=0; i< recipeEdit.length; i++) {
+        recipeEdit[i].classList.add("recipeEntryEditNight");
+        recipeEdit[i].classList.remove("recipeEntryEditLight");
+    }
+
+    for (var i=0; i< divideLine.length; i++) {
+        divideLine[i].classList.add("editDivideLineNight");
+        divideLine[i].classList.remove("editDivideLineLight");
     }
 
 
