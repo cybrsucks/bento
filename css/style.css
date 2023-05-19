@@ -560,6 +560,7 @@ li {
 	width: 10rem;
     text-align: center;
 	color: white;
+	cursor: pointer;
 }
 
 .recipeEntryTwoHalf span {
@@ -579,53 +580,33 @@ li {
 
 /* modal container for editing recipes */
 .editRecipeModal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 10; /* Sit on top */
-	/* padding-top: 100px; Location of the box */
+	display: none;
+	position: fixed;
+	z-index: 5;
 	padding: 3rem 0;
 	left: 0;
 	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
 }
 
 .editRecipeModalContent {
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-	background-color: #E0B3BA;
 	margin: auto;
 	padding: 2.1rem 2rem;
 	width: 35rem;
 	height: auto;
 	border-radius: 24px;
-	border: 2px solid #960018;
-}
-
-.close {
-	display: none;
-	color: #e3405b;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-	color: #E8667B;
-	text-decoration: none;
-	cursor: pointer;
 }
 
 .modalTitle {
-	color: #960018;
 	font-size: 1.8rem;
 	text-align: center;
 }
 
 .modalHoriLine {
-	border-top: 3px solid #960018;
 	width: 28rem;
     margin: auto;
 }
@@ -643,7 +624,6 @@ li {
 }
 
 .modalRecipeLabel {
-	color: #960018;
 	padding-left: 1rem;
 	width: 10rem;
 	margin: 0;
@@ -652,16 +632,11 @@ li {
 .modalField {
 	width: 14rem;
 	padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-	color: #ca7d89;
 	border-radius: 0.2rem;
-	border: 1px solid #960018;
 }	
 
 .modalField:focus{
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-	color: #960018;
-	outline: 1px solid #960018;
-	
+	box-shadow: rgba(0, 0, 0, 0.15) 0 .4rem .4rem 0;
 }
 
 .modalRecipeField {
@@ -708,31 +683,11 @@ li {
 
 .clicktoClose {
 	display: block;
-	font-size: 1rem;
+	font-size: 0.8rem;
 	margin: auto;
 	text-align: center;
-	color: #767676;
 	padding-top: 1rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* end of BODY CONTENT: RECIPES */
 
 
@@ -943,13 +898,11 @@ footer {
 	}
 
 	.footer-accordionLight {
-		/* box-shadow: 0 -3rem 2rem 18px #d9a1aa; */
 		display: block;
 		width: 100%;
 	}
 
 	.footer-accordionNight {
-		/* box-shadow: 0 -2rem 2rem 18px #606060; */
 		display: block;
 		width: 100%;
 	}
@@ -1021,13 +974,11 @@ footer {
 	}
 
 	.footer-accordionLight {
-		/* box-shadow: 0 -3rem 2rem 18px #d9a1aa; */
 		display: block;
 		width: 100%;
 	}
 
 	.footer-accordionNight {
-		/* box-shadow: 0 -2rem 2rem 18px #606060; */
 		display: block;
 		width: 100%;
 	}
@@ -1091,14 +1042,6 @@ footer {
 		margin: 0.5rem 0;
 		padding-left: 70px;
 	}
-
-	.footer-accordionLight {
-		/* box-shadow: 0 -2rem 1.8rem 18px #d9a1aa; */
-	}
-
-	.footer-accordionNight {
-		/* box-shadow: 0 -1.2rem 2rem 18px #606060; */
-	}
 }
 /* end of FOOTER */
 
@@ -1158,10 +1101,6 @@ footer {
 	border-left: 2px solid #960018;
 }
 
-.accordionItemHeaderLight {
-	/* background-color: #E0B3BA; */
-}
-
 .accordionItemHeaderLight:hover {
 	background-color: #ca7d89;
 	text-decoration: underline;
@@ -1191,6 +1130,42 @@ footer {
 .recipeEntryEditLight:hover {
 	background-color: #B54C5C;
 }
+
+
+/* edit recipe modal */
+.editRecipeModalContent--Light {
+	background-color: #E0B3BA;
+	border: 2px solid #960018;
+}
+
+.modalTitle--Light {
+	color: #960018;
+}
+
+.modalLine--Light {
+	border-top: 3px solid #960018;
+}
+
+.modalRecipeLabel--Light {
+	color: #960018;
+}
+
+.modalField--Light {
+	color: #a6a6a6;
+	border: 1px solid #960018;
+	background-color: #e0e0e0;
+}
+
+.modalField--Light:focus {
+	color: #960018;
+	outline: 1.5px solid #960018;
+	background-color: white;
+}
+
+.clicktoClose--Light {
+	color: #606060;
+}
+
 
 /* end of LIGHT MODE STYLE */
 
@@ -1250,10 +1225,6 @@ footer {
 	border-left: 2px solid #e3405b;
 }
 
-.accordionItemHeaderNight {
-	/* background-color: #505050; */
-}
-
 .accordionItemHeaderNight:hover {
 	background-color: #303030;
 	text-decoration: underline;
@@ -1284,6 +1255,41 @@ footer {
 	background-color: #606060;
 }
 
+/* edit recipe modal */
+.editRecipeModalContent--Night {
+	background-color: #404040;
+	border: 1px solid #050505;
+}
+
+.modalTitle--Night {
+	color: white;
+}
+
+.modalLine--Night {
+	border-top: 3px solid white;
+}
+
+.modalRecipeLabel--Night {
+	color: white;
+}
+
+.modalField--Night {
+	box-shadow: none;
+	color: #909090;
+	border: 1.5px solid rgb(40,40,40);
+	background-color: #3c3c3c;
+}
+
+.modalField--Night:focus {
+	color: white;
+	outline: 1px solid white;
+	background-color: #4b4d4f;
+}
+
+.clicktoClose--Night {
+	color: white;
+}
+
 
 /* end of NIGHT MODE STYLE */
 
@@ -1296,8 +1302,6 @@ footer {
 	position: relative;
 	color: white;
 	padding: 6px;
-	/* margin-right: 80px; */
-	/* top: 30%; */
 	transform: translateY(50%);
 }
 

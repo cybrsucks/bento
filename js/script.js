@@ -45,7 +45,6 @@ window.onclick = function(event) {
     }
 }
 
-
 for (var i=0; i< editRecipeBtn.length; i++) {
     editRecipeBtn[i].addEventListener("click", (e) => {
         modal.style.display = "block";
@@ -109,13 +108,13 @@ const recipeFlexBox = document.getElementsByClassName("recipeEntry");
 const recipeEdit = document.getElementsByClassName("recipeEntryTwoHalf");
 const divideLine = document.getElementsByClassName("editDivideLine");
 
-
-
-
-
-
-
-
+/* edit recipe modal */
+const editRecipeModal = document.getElementsByClassName("editRecipeModalContent");
+const modalTitle = document.getElementsByClassName("modalTitle");
+const modalLine = document.getElementsByClassName("modalHoriLine");
+const modalRecipeLabel = document.getElementsByClassName("modalRecipeLabel");
+const modalField = document.getElementsByClassName("modalField");
+const clicktoClose = document.getElementsByClassName("clicktoClose");
 
 
 
@@ -224,18 +223,57 @@ const enableLightMode = () => {
         recipeFlexBox[i].classList.remove("recipeEntryNight");
     }
 
-
     for (var i=0; i< recipeEdit.length; i++) {
         recipeEdit[i].classList.add("recipeEntryEditLight");
         recipeEdit[i].classList.remove("recipeEntryEditNight");
     }
-
 
     for (var i=0; i< divideLine.length; i++) {
         divideLine[i].classList.add("editDivideLineLight");
         divideLine[i].classList.remove("editDivideLineNight");
     }
 
+
+    /* edit recipe modal */
+    for (var i=0; i< editRecipeModal.length; i++) {
+        editRecipeModal[i].classList.add("editRecipeModalContent--Light");
+        editRecipeModal[i].classList.remove("editRecipeModalContent--Night");
+    }
+
+    for (var i=0; i< modalTitle.length; i++) {
+        modalTitle[i].classList.add("modalTitle--Light");
+        modalTitle[i].classList.remove("modalTitle--Night");
+    }
+
+    for (var i=0; i< modalLine.length; i++) {
+        modalLine[i].classList.add("modalLine--Light");
+        modalLine[i].classList.remove("modalLine--Night");
+    }
+
+    for (var i=0; i< modalRecipeLabel.length; i++) {
+        modalRecipeLabel[i].classList.add("modalRecipeLabel--Light");
+        modalRecipeLabel[i].classList.remove("modalRecipeLabel--Night");
+    }
+
+    for (var i=0; i< modalField.length; i++) {
+        modalField[i].classList.add("modalField--Light");
+        modalField[i].classList.remove("modalField--Night");
+    }
+
+    for (var i=0; i< clicktoClose.length; i++) {
+        clicktoClose[i].classList.add("clicktoClose--Light");
+        clicktoClose[i].classList.remove("clicktoClose--Night");
+    }
+
+
+
+
+
+
+
+
+
+    
 
     /* Set localStorage value */
     localStorage.setItem("lightMode", "enabled");
@@ -354,6 +392,36 @@ const disableLightMode = () => {
     for (var i=0; i< divideLine.length; i++) {
         divideLine[i].classList.add("editDivideLineNight");
         divideLine[i].classList.remove("editDivideLineLight");
+    }
+
+    for (var i=0; i< editRecipeModal.length; i++) {
+        editRecipeModal[i].classList.add("editRecipeModalContent--Night");
+        editRecipeModal[i].classList.remove("editRecipeModalContent--Light");
+    }
+
+    for (var i=0; i< modalTitle.length; i++) {
+        modalTitle[i].classList.add("modalTitle--Night");
+        modalTitle[i].classList.remove("modalTitle--Light");
+    }
+
+    for (var i=0; i< modalLine.length; i++) {
+        modalLine[i].classList.add("modalLine--Night");
+        modalLine[i].classList.remove("modalLine--Light");
+    }
+
+    for (var i=0; i< modalRecipeLabel.length; i++) {
+        modalRecipeLabel[i].classList.add("modalRecipeLabel--Night");
+        modalRecipeLabel[i].classList.remove("modalRecipeLabel--Light");
+    }
+
+    for (var i=0; i< modalField.length; i++) {
+        modalField[i].classList.add("modalField--Night");
+        modalField[i].classList.remove("modalField--Light");
+    }
+
+    for (var i=0; i< clicktoClose.length; i++) {
+        clicktoClose[i].classList.add("clicktoClose--Night");
+        clicktoClose[i].classList.remove("clicktoClose--Light");
     }
 
 
