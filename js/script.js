@@ -55,23 +55,6 @@ for (var i=0; i< editRecipeBtn.length; i++) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // MODE SWITCH
 
 const toggleBtn = document.getElementById("toggle-btn");

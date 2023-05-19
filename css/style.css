@@ -368,6 +368,12 @@ li {
 	display: inline;
 }
 
+.mainContainer {
+	padding-top: 1.8rem;
+	margin: auto;
+	font-size: 1.2rem;
+}
+
 .imageZoom {
 	overflow: hidden;
 	border-radius: 24px;
@@ -482,11 +488,8 @@ li {
 
 
 /* manage recipes */
-.container-list {
+.manageRecipes {
 	width: 80rem;
-	padding-top: 1.8rem;
-	margin: auto;
-	font-size: 1.2rem;
 }
 
 .recipeEntry {
@@ -520,6 +523,9 @@ li {
 	text-align: center;
 }
 
+.editDivideLine {
+	width: 2.5rem;
+}
 
 .recipeNum, .recipeEntryOneHalf, .recipeEntryTwoHalf {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -543,16 +549,6 @@ li {
 	transition: all .4s ease-in-out;
 }
 
-.editDivideLineLight {
-	width: 2.5rem;
-	background-color: #EEEDE7;
-}
-
-.editDivideLineNight {
-	width: 2.5rem;
-	background-color: #292924;
-}
-
 .recipeEntryTwoHalf {
     margin: auto;
 	display: flex;
@@ -572,6 +568,76 @@ li {
 	color: white;
 	transition: all .3s ease-in-out;
 }
+
+@media screen and (max-width: 1320px) { 
+	.manageRecipes, .recipeEntry {
+		width: 60rem;
+	}
+
+	.recipeEntryOneHalf {
+		width: 45rem;
+	}
+
+	.recipeEntryTwoHalf {
+		width: 7.5rem;
+	}
+
+	.editDivideLine {
+		width: 1.875rem;
+	}
+}
+
+@media screen and (max-width: 1000px) { 
+	.manageRecipes, .recipeEntry {
+		width: 40rem;
+	}
+
+	.recipeEntry, .recipeEntryOneHalf, .recipeNum, .recipeEntryTwoHalf {
+		height: 5rem;
+	}
+
+	.recipeEntryOneHalf {
+		width: 28rem;
+	}
+
+	.imageEntry {
+		width: 4.5rem;
+		height: 4.5rem;
+		margin: 0.25rem 2rem;
+	}
+
+	.recipeEntryTwoHalf {
+		width: 9rem;
+	}
+
+	.editDivideLine {
+		width: 1.5rem;
+	}
+
+	.imageEntry:hover {
+		transform: scale(3);
+	}
+}
+
+@media screen and (max-width: 720px) { 
+	.manageRecipes, .recipeEntry {
+		width: 30rem;
+	}
+
+	.recipeEntryOneHalf {
+		width: 22rem;
+	}
+
+	.recipeEntryTwoHalf {
+		width: 5rem;
+	}
+
+	.editDivideLine {
+		width: 1.5rem;
+	}
+}
+
+
 
 
 
@@ -1132,6 +1198,7 @@ footer {
 }
 
 
+
 /* edit recipe modal */
 .editRecipeModalContent--Light {
 	background-color: #E0B3BA;
@@ -1254,6 +1321,7 @@ footer {
 .recipeEntryEditNight:hover {
 	background-color: #606060;
 }
+
 
 /* edit recipe modal */
 .editRecipeModalContent--Night {
