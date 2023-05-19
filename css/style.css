@@ -652,18 +652,17 @@ li {
 .modalField {
 	width: 14rem;
 	padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-	color: #960018;
+	color: #ca7d89;
 	border-radius: 0.2rem;
 	border: 1px solid #960018;
 }	
 
 .modalField:focus{
-	box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 0.2rem;
-	background-color: #f9f9f9;
-	/* outline: 1px solid #960018; */
-	outline: none;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+	color: #960018;
+	outline: 1px solid #960018;
+	
 }
-
 
 .modalRecipeField {
 	margin: 0;
