@@ -103,37 +103,55 @@
         <!-- BREADCRUMB BAR -->
         <div class="bcbar" id="toggleBcbar">
           <div class="datetime-group bcbarText">
-            Current Date | Time: <span class="datetime" id="daydate"></span>, <span class="datetime" id="time"></span>
-          </div>
-          <div class="bcbar-right">
-            <ul>
-              <li class="float-right">
-                <div class="view-all-recipes">
-                  <a class="special-border-a hoverBc" href="/viewAllRecipes.html">
-                    <span class="special-border-span"></span>
-                    <span class="breadcrumb-bar-right-text bcbarText"> View All Recipes </span>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="manage-recipes">
-                  <a class="special-border-a hoverBc" href="/manageRecipes.html">
-                    <span class="special-border-span"></span>
-                    <span class="breadcrumb-bar-right-text bcbarText"> Manage Recipes </span>
-                  </a>
-                </div>
-              </li>
-            </ul>
+            <span class="datetime" id="daydate" style="display: none;"></span> <span class="datetime" id="time" style="display: none;"></span>
+            <a href="/" class="breadcrumb-Text">Home</a> > <a href="viewAllRecipes.html" class="breadcrumb-Text">View All Recipes</a> > <a href="bacon-carbonara.html" class="breadcrumb-Text">Bacon Carbonara</a>
           </div>
         </div>
 
         <div class="pageContent">
           <div class="mealBar">
-            <h2 class="recipeTitle bodyText"> Shopping List </h2>
+            <h2 class="recipeTitle bodyText"> </h2>
           </div>
-          
-        </div>
 
+          <div class="mainContainer recipePage">
+
+            <div class="recipePageContent">
+
+              <div class="recipePageRecipeCard">
+                <img src="images/2_1/bacon-carbonara.jpg" class="recipePageRecipeCardImg"> 
+                <div class="recipePageRecipeCardTitle"> 
+                  <span> Bacon Carbonara </span>
+                  <p> Lunch, Dinner </p> 
+                </div>
+              </div>
+
+              <div class="recipePageIngredientCard">
+                <p class="recipePageIngredientTitle"> Ingredients </p>
+                <hr class="recipePageIngredCardHoriLine">
+                <div class="recipePageIngredList">
+                  <p> 125g pappardelle pasta </p> 
+                  <hr class="recipePageIngredListHoriLine">
+                  <p> 1/3 cup cooking cream </p> 
+                  <hr class="recipePageIngredListHoriLine">
+                  <p> 50g parmesan cheese </p> 
+                  <hr class="recipePageIngredListHoriLine">
+                  <p> 2 egg yolks </p>
+                  <hr class="recipePageIngredListHoriLine">
+                  <p> 125g bacon </p>
+                  <hr class="recipePageIngredListHoriLine">
+                  <p> 1 thyme sprig </p>
+                </div>
+
+                <div class="addToMealPlanBtn">
+                  Add to Meal Plan
+                </div>
+                
+              </div>
+
+            </div>
+            
+          </div>
+        </div>
       </div>
 
       <!-- FOOTER SECTION -->

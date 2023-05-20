@@ -99,7 +99,10 @@ const modalRecipeLabel = document.getElementsByClassName("modalRecipeLabel");
 const modalField = document.getElementsByClassName("modalField");
 const clicktoClose = document.getElementsByClassName("clicktoClose");
 
-
+/* recipe page */
+const recipeCard = document.getElementsByClassName("recipePageRecipeCard");
+const recipeIngredCard = document.getElementsByClassName("recipePageIngredientCard");
+const addToMealPlanBtn = document.getElementsByClassName("addToMealPlanBtn");
 
 let lightMode = localStorage.getItem("lightMode");
 
@@ -249,14 +252,23 @@ const enableLightMode = () => {
     }
 
 
+    /* recipe page */
+    for (var i=0; i< recipeCard.length; i++) {
+        recipeCard[i].classList.add("recipePageRecipeCard--Light");
+        recipeCard[i].classList.remove("recipePageRecipeCard--Night");
+    }
+
+    for (var i=0; i< recipeIngredCard.length; i++) {
+        recipeIngredCard[i].classList.add("recipePageIngredientCard--Light");
+        recipeIngredCard[i].classList.remove("recipePageIngredientCard--Night");
+    }
+
+    for (var i=0; i< addToMealPlanBtn.length; i++) {
+        addToMealPlanBtn[i].classList.add("addToMealPlanBtn--Light");
+        addToMealPlanBtn[i].classList.remove("addToMealPlanBtn--Night");
+    }
 
 
-
-
-
-
-
-    
 
     /* Set localStorage value */
     localStorage.setItem("lightMode", "enabled");
@@ -406,6 +418,24 @@ const disableLightMode = () => {
         clicktoClose[i].classList.add("clicktoClose--Night");
         clicktoClose[i].classList.remove("clicktoClose--Light");
     }
+
+
+    /* recipe page */
+    for (var i=0; i< recipeCard.length; i++) {
+        recipeCard[i].classList.add("recipePageRecipeCard--Night");
+        recipeCard[i].classList.remove("recipePageRecipeCard--Light");
+    }
+
+    for (var i=0; i< recipeIngredCard.length; i++) {
+        recipeIngredCard[i].classList.add("recipePageIngredientCard--Night");
+        recipeIngredCard[i].classList.remove("recipePageIngredientCard--Light");
+    }
+
+    for (var i=0; i< addToMealPlanBtn.length; i++) {
+        addToMealPlanBtn[i].classList.add("addToMealPlanBtn--Night");
+        addToMealPlanBtn[i].classList.remove("addToMealPlanBtn--Light");
+    }
+
 
 
     /* Set localStorage value */

@@ -19,7 +19,7 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Josefin Sans', 'Segoe UI', 'Calibri';
+	font-family: 'Rubik', 'Josefin Sans', 'Segoe UI', 'Calibri';
 	font-weight: 500;
 }
 
@@ -385,6 +385,10 @@ li {
 
 .imageZoom:hover img{
 	transform: scale(1.3);
+}
+
+.imageZoom:hover {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .recipeCard p {
@@ -754,6 +758,128 @@ li {
 	text-align: center;
 	padding-top: 1rem;
 }
+
+
+
+
+
+/* recipe page */
+.recipePage {
+	width: 80rem;
+}
+
+.recipePageContent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.recipePageRecipeCard {
+	width: 40rem;
+	height: 36rem;
+	border-radius: 30px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.recipePageRecipeCardImg {
+	width: 40rem;
+	height: 30rem;
+	object-fit: cover;
+	border-radius: 30px 30px 0 0;
+}
+
+.recipePageRecipeCardTitle {
+	width: 40rem;
+	height: 6rem;
+	text-align: center;
+	padding: 0.5rem;
+	overflow-wrap: break-word;
+	border-radius: 0 0 30px 30px;
+}
+
+.recipePageRecipeCardTitle span {
+	margin: 0.5rem;
+	font-size: 1.8rem;
+}
+
+.recipePageRecipeCardTitle p {
+	padding: 0.5rem;
+	font-size: 1.3rem;
+}
+
+.recipePageIngredientCard {
+	padding: 3rem 0;
+	width: 32rem;
+	height: auto;
+	border-radius: 30px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.recipePageIngredientTitle {
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.recipePageIngredCardHoriLine {
+	width: 25rem;
+    margin: auto;
+}
+
+.recipePageIngredList {
+	padding: 2rem 0;
+}
+
+.recipePageIngredList p {
+    display: flex;
+    margin: auto;
+    width: 24rem;
+    padding: 1rem 0;
+}
+
+.recipePageIngredListHoriLine {
+	width: 25rem;
+    margin: 0.2rem auto;
+}
+
+.addToMealPlanBtn {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    width: 12rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem 0 0 15rem;
+	border-radius: 0.3rem;
+}
+
+.addToMealPlanBtn:hover {
+    transition: .3s ease-in-out;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* end of BODY CONTENT: RECIPES */
 
 
@@ -1234,6 +1360,27 @@ footer {
 }
 
 
+/* recipe page */
+.recipePageRecipeCard--Light, .recipePageIngredientCard--Light {
+	background-color: #E0B3BA;
+	color: #960018;
+}
+
+.addToMealPlanBtn--Light {
+	color: #960018;
+	background-color: white;
+}
+
+.addToMealPlanBtn--Light:hover {
+    background-color: #B54C5C;
+    color: white;
+}
+
+
+
+
+
+
 /* end of LIGHT MODE STYLE */
 
 
@@ -1249,11 +1396,13 @@ footer {
 .navbarNight {
 	/* Navigation Bar */
 	background-color: #262a3b;
+	/* background-color: #121212; */
 }
 
 .navbarNightA{
 	/* navbar links */
-	color:#e3405b;
+	/* color:#e3405b; */
+	color: white;
 }
 
 .navbar-hover-night:hover {
@@ -1273,7 +1422,8 @@ footer {
 
 .textNight {
 	/* text colour */
-	color: #e3405b;
+	/* color: #e3405b; */
+	color: white;
 }
 
 .footerNight {
@@ -1357,6 +1507,27 @@ footer {
 .clicktoClose--Night {
 	color: white;
 }
+
+
+/* recipe page */
+.recipePageRecipeCard--Night, .recipePageIngredientCard--Night {
+	background-color: #404040;
+	color: white;
+}
+
+.addToMealPlanBtn--Night {
+	background-color: #303030;
+    color: white;
+    outline: 2px solid white;
+}
+
+.addToMealPlanBtn--Night:hover {
+    background-color: white;
+    color: #292924;
+	outline: none;
+}
+
+
 
 
 /* end of NIGHT MODE STYLE */
