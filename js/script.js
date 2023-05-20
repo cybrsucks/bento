@@ -55,6 +55,116 @@ for (var i=0; i< editRecipeBtn.length; i++) {
 
 
 
+
+
+
+
+
+
+
+
+const recipeAccordions = document.querySelectorAll(".recipe-accordion");
+
+recipeAccordions.forEach(recipeAccordion => {
+    recipeAccordion.addEventListener("click", function(event) {
+        if (event.target.matches(".recipe-accordion-item-header")) {
+
+            var content = event.target.nextElementSibling;
+            content.style.display = "none";
+
+            var accordionChevron = event.target.querySelector(".accordionChevron");
+            accordionChevron.style.transform = 'rotate(180deg)';
+            accordionChevron.style.transition = "all 0.5s ease-in-out;"
+
+
+            let active = this.querySelector(".recipeAccordionActive");
+
+            if (active == event.target) {
+                event.target.classList.toggle("recipeAccordionActive");
+
+                event.target.style.backgroundColor = '';  // if accordion title clicked = already active accordion, reset back to original backgroundColor
+                event.target.style.textDecoration = 'none';
+
+                accordionChevron.style.transform = 'none';
+                
+                var content = event.target.nextElementSibling;
+                content.style.display = "block";
+                content.style.transition = "all 0.5s ease-in-out;"
+
+            } else {
+                //Remove current active.
+                if (active) {
+                    active.classList.remove("recipeAccordionActive");
+
+                    active.style.backgroundColor = '';  // reset any active accordions back to original backgroundColor
+                    active.style.textDecoration = 'none';
+
+                    var content = active.nextElementSibling;
+                    content.style.display = "none";
+
+                    var accordionChevron = active.querySelector(".accordionChevron");
+                    accordionChevron.style.transform = 'none';
+                }
+                //Add active        
+                event.target.classList.add("recipeAccordionActive");
+
+                if (modeLight == "enabled") {
+                    event.target.style.backgroundColor = '#ca7d89';
+                    event.target.style.textDecoration = 'underline';
+                }else{
+                    event.target.style.backgroundColor = '#292924';
+                    event.target.style.textDecoration = 'underline';
+                }
+
+                var content = event.target.nextElementSibling;
+                content.style.display = "block";
+                content.style.transition = "all 0.5s ease-in-out;"
+            }
+
+            if (!(event.target.classList.contains("recipeAccordionActive"))) {
+                var content = event.target.nextElementSibling;
+                content.style.display = "none";
+            }
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // MODE SWITCH
 
 const toggleBtn = document.getElementById("toggle-btn");

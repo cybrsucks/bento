@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <!-- SHIFT ALT F TO REFORMAT FILE -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/icons/bento.ico">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"/>  <!-- import bootstrap -->
+    <script src="https://kit.fontawesome.com/fe5f501db5.js" crossorigin="anonymous"></script>  <!-- import fontawesome icons -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>BENTO: Meal Planner</title>
+  </head>
+  <body id="noBodynoBodybutYou">
+    <div id="windowWarning">
+      <div>
+        <p> Rotate your device orientation for better experience. </p>
+        <img src="images\phone_turn.gif">
+      </div>
+    </div>
+    <div id="page-container">
+
+      <!-- MOBILE NAVIGATION BAR -->
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="/index.html" class="mobile-navA"> 
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="/shoppingList.html" class="mobile-navA">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Shopping List</span>
+        </a>
+        <a href="/mealPlan.html" class="mobile-navA">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <span>Meal Plan</span>
+        </a>
+        <br><br>
+        <a href="/viewAllRecipes.html" class="mobile-navA">
+          <i class="fa-solid fa-apple-whole"></i>
+          <span>View All Recipes</span>
+        </a>
+        <a href="/manageRecipes.html" class="mobile-navA">
+          <i class="fa-solid fa-pizza-slice"></i>
+          <span>Manage Recipes</span>
+        </a>
+      </div>
+      
+      <div class="backdrop" id="backdrop"></div> <!-- backdrop for mobile-nav -->
+
+      <div id="content-wrap">
+        <!-- NAVIGATION BAR -->
+        <div class="navbar" id="toggleNavbar">
+          <div class="home-group hoverNav">
+            <a href="/" class="navbarLinks">
+              HOME <i class="fa-solid fa-house"></i>
+            </a>
+          </div>
+
+          <div class="navbar-right">
+            <ul>
+              <li style="margin:auto;">
+                <div style="margin-right: 30px">
+                  <input type="checkbox" id="toggle" class="toggle--checkbox"/>
+                  <label for="toggle" id="toggle-btn" class="toggle--label">
+                  </label>
+                </div>
+              </li>
+
+
+              <!-- Mobile Dimensions, Hamburger Menu -->
+              <li style="padding-right: 20px;">
+                <div class="hamburger">
+                  <div class="bar"></div>
+                </div>
+              </li>
+
+              <!-- PC Dimensions -->
+              <li class="rightLinks" style="padding-right:20px;">
+                <div class="hoverNav">
+                  <a href="/shoppingList.html" class="navbarLinks">
+                  <div class="shoppingList">Shopping List</div>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </div>
+              </li>
+              <li class="rightLinks" style="padding-right:20px;">
+                <div class="hoverNav">
+                  <a href="/mealPlan.html" class="navbarLinks">
+                  <div class="mealPlan">Meal Plan</div>
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- BREADCRUMB BAR -->
+        <div class="bcbar" id="toggleBcbar">
+          <div class="datetime-group bcbarText">
+            <span class="datetime" id="daydate" style="display: none;"></span> <span class="datetime" id="time" style="display: none;"></span>
+            <a href="/" class="breadcrumb-Text">Home</a> > <a href="mealPlan.html" class="breadcrumb-Text">Meal Plan</a>
+          </div>
+        </div>
+
+        <div class="pageContent">
+          <div class="mealBar">
+            <h2 class="recipeTitle bodyText"> </h2>
+          </div>
+
+          <div class="mainContainer mealPlanDiv">
+            <div class="mealPlanContent">
+              <p class="mealPlanTitle"> Meal Plan </p>
+              <hr class="mealPlanHoriLine">
+              <div class="mealPlanRecipes">
+
+                <div id="recipe-accordion" class="recipe-accordion">
+
+                  <div class="recipe-accordion-item">
+                    <div class="recipe-accordion-item-header recipeAccordionText"> 
+                      <i class="fa-solid fa-chevron-down accordionChevron"></i>
+                      Bacon Carbonara 
+                    </div>
+                    <div class="recipe-accordion-item-body">
+                      <ul>
+                        <li> flavour1 </li>
+                        <li> flavour1 </li>
+                        <li> flavour1 </li>
+                        <li> flavour1 </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <hr class="mealPlanRecipesHoriLine">
+
+                  <div class="recipe-accordion-item">
+                    <div class="recipe-accordion-item-header recipeAccordionText"> 
+                      <i class="fa-solid fa-chevron-down accordionChevron"></i>
+                      Omelette 
+                    </div>
+                    <div class="recipe-accordion-item-body">
+                      <ul>
+                        <li> flavour1 </li>
+                        <li> flavour1 </li>
+                        <li> flavour1 </li>
+                        <li> flavour1 </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <hr class="mealPlanRecipesHoriLine">
+
+                  <div class="recipe-accordion-item">
+                    <div class="recipe-accordion-item-header recipeAccordionText"> 
+                      <i class="fa-solid fa-chevron-down accordionChevron"></i>
+                      French Toast 
+                    </div>
+                    <div class="recipe-accordion-item-body">
+                      <ul>
+                        <li> flavour1 </li>
+                        <li> flavour1 </li>
+                        <li> flavour1 </li>
+                        <li> flavour1 </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+
+              <div class="genNewShoppingList">
+                Generate New Shopping List
+              </div>
+              
+            </div>
+
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER SECTION -->
+      <footer id="elfooter">
+        <div class="footer-container">
+          <div class="footerDivs">
+            <span class="footerBENTO toggleFooterItemColour"> BENTO </span>
+            <div class="footerIconsMobile">
+              <i class="fa-solid fa-envelope toggleFooterItemColour"></i>
+              <i class="fa-brands fa-github toggleFooterItemColour"></i>
+              <i class="fa-brands fa-linkedin toggleFooterItemColour"></i>
+              <i class="fa-solid fa-question toggleFooterItemColour"></i>
+            </div>
+          </div>
+          <span id="verticalFooterLine" class=""> </span>
+          <div class="footerIcons">
+            <i class="fa-solid fa-envelope toggleFooterItemColour"></i>
+            <i class="fa-brands fa-github toggleFooterItemColour"></i>
+            <i class="fa-brands fa-linkedin toggleFooterItemColour"></i>
+            <i class="fa-solid fa-question toggleFooterItemColour"></i>
+          </div>
+
+          <div class="footerTable">
+            <table>
+              <thead>
+                <tr class="footerTableRow">
+                  <th class="footerTitle toggleFooterItemColour">Home</th>
+                  <th class="footerTitle toggleFooterItemColour">Shopping List</th>
+                  <th class="footerTitle toggleFooterItemColour">Meal Plan</th>
+                  <th class="footerTitle toggleFooterItemColour">Recipes</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="footerTableRow">
+                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/breakfastRecipes.html" class="footerLinks"> Breakfast Recipes </a></td>
+                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/editShoppingList.html" class="footerLinks"> Edit Shopping List </a></td>
+                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/editMealPlan.html" class="footerLinks"> Edit Meal Plan </a></td>
+                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/manageRecipes.html" class="footerLinks"> Manage Recipes </a></td>
+                </tr>
+                <tr class="footerTableRow">
+                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/lunchRecipes.html" class="footerLinks"> Lunch Recipes</a></td>
+                  <td></td>
+                  <td></td>
+                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/mkrec.html" class="footerLinks"> Create New Recipe </a></td>
+                </tr>
+                <tr class="footerTableRow">
+                  <td class="footerSubtitle toggleFooterItemColour"> <a href="/dinnerRecipes.html" class="footerLinks"> Dinner Recipes</a></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        
+          <div id="footer-accordion" class="footer-accordion">
+            <div class="accordion-item">
+              <div class="accordion-item-header accordionText"> Home </div>
+              <div class="accordion-item-body">
+                <ul>
+                  <a href="/breakfastRecipes.html"> <li class="accordionText"> Breakfast </li> </a>
+                  <a href="/lunchRecipes.html"> <li class="accordionText"> Lunch </li> </a>
+                  <a href="/dinnerRecipes.html"> <li class="accordionText"> Dinner </li> </a>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-item-header accordionText"> Shopping List </div>
+              <div class="accordion-item-body">
+                <ul>
+                  <a href="/editShoppingList.html"> <li class="accordionText"> Edit Shopping List </li> </a>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-item-header accordionText"> Meal Plan </div>
+              <div class="accordion-item-body">
+                <ul>
+                  <a href="/editMealPlan.html"> <li class="accordionText"> Edit Meal Plan </li> </a>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-item-header accordionText"> Recipes </div>
+              <div class="accordion-item-body">
+                <ul>
+                  <a href="/viewAllRecipes.html"> <li class="accordionText"> View All Recipes </li> </a>
+                  <a href="/manageRecipes.html"> <li class="accordionText"> Manage Recipes </li> </a>
+                  <a href="/mkrec.html"> <li class="accordionText"> Create A New Recipe </li> </a>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      </footer>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="js/script.js"></script>  <!-- import own script -->
+  <!-- <script type="text/javascript" src="js/modeSwitch.js"></script>  import own script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script> <!-- import bootstrap -->
+</html>
