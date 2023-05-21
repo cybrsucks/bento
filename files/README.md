@@ -57,4 +57,6 @@ Large parts of this website is hard-coded (unfortunately), but this documentatio
 2. [Myself as testing user](https://www.cybrsucks.github.io)
 3. [Exquisite box-shadow designs](https://getcssscan.com/css-box-shadow-examples)
 4. [UQ Website for mobile resolution footer accordions](https://uq.edu.au)
+5. [Chrome DevTools that opened my eyes to accessiblity and readability](https://developers.google.com/codelabs/devtools-cvd#4)
+6. [How pro website builders utilise opacity, elevation and colour choices](https://m2.material.io/design/color/dark-theme.html#properties)
 
