@@ -11,7 +11,7 @@ Large parts of this website is hard-coded (unfortunately), but this documentatio
 - **bacon-carbonara.html**      -- (a working) Recipe Page
 - **beef-lasagna.html**         -- (another working) Recipe Page
 
-### Images 
+### Screenshots of working website
 - manage recipe modal to edit name of recipe and ingredient name and ingredient measure  
 <img src="/files/MDsrc/manage-recipes-modal.png" width=50%>
 
@@ -20,7 +20,7 @@ Large parts of this website is hard-coded (unfortunately), but this documentatio
 
 
 ### Features
-1. Mobile Compatibility
+##### 1. Mobile Compatibility
 - iPad Air width: 820pixels
 <img src="/files/MDsrc/iPadAir.png" width=820px>
 
@@ -32,8 +32,15 @@ Large parts of this website is hard-coded (unfortunately), but this documentatio
 - try squeezing the screen to 500px or less!
 <img src="/files/MDsrc/rotate500.png" width=500px>
 
-2. my personal favourite: minimal borders 
-<img src="/files/MDsrc/minimalBorders.gif" width=50%>
+##### 2. my personal favourite: minimal borders (pikachu cursor not included)
+- <img src="/files/MDsrc/minimalBorders.gif" width=50%>
+
+##### 3. Light and Night Mode (hooray for eye comforting visuals)
+- <img src="/files/MDsrc/LightToNight.gif" width=50%>
+
+##### 4. Print your shopping list! 
+- What is the use of a meal planner website if you can't quickly get a shopping list to boot?
+- <img src="/files/MDsrc/print-your-shopping-list.gif" width=50%>
 
 
 ### References: 
