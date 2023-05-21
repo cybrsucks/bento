@@ -12,8 +12,20 @@ Large parts of this website is hard-coded (unfortunately), but this documentatio
 - **beef-lasagna.html**         -- (another working) Recipe Page
 
 ### Images 
-![modals](/manage-recipes-modal.png)
-![modals](/shopping-list-modal.png)
+- manage recipe modal to edit name of recipe and ingredient name and ingredient measure  
+![manage recipe modal to edit name of recipe and ingredient name and ingredient measure](/files/manage-recipes-modal.png)
+
+- shopping list edit ingredient modal with focused field effect  
+![shopping list edit ingredient modal with focused field effect](/files/shopping-list-modal.png)
+
+
+### Features
+1. Mobile Compatibility
+![iPad Air W:820px](/files/iPadAir.png)
+- for reference: wider screen resolutions like Surface Pro 7 (W: 912px)
+![SurfacePro7 W:912px](/files/SurfacePro7.png)
+
+
 
 ### References: 
 1. [Woolies website and interface design](https://www.woolworths.com.au/shop/recipes)
