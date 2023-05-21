@@ -1,0 +1,22 @@
+@media print {
+    .navbar, .bcbar, #windowWarning, .mobile-nav, footer {
+        display: none;
+    }
+
+    .mealPlanContent {
+        display: block;
+    }
+
+    .shopList li > span:nth-child(2) {
+        display: inline;
+    }
+
+    .shopList li > span:nth-child(4) {
+        /* refers to edit in shopping list */
+        display: none;
+    }
+
+    .mealPlanHoriLine, .mealPlanLabel, .printShopList {
+        display: none;
+    }
+}
