@@ -13,18 +13,27 @@ Large parts of this website is hard-coded (unfortunately), but this documentatio
 
 ### Images 
 - manage recipe modal to edit name of recipe and ingredient name and ingredient measure  
-![manage recipe modal to edit name of recipe and ingredient name and ingredient measure](/files/manage-recipes-modal.png)
+<img src="/files/MDsrc/manage-recipes-modal.png" width=50%>
 
 - shopping list edit ingredient modal with focused field effect  
-![shopping list edit ingredient modal with focused field effect](/files/shopping-list-modal.png)
+<img src="/files/MDsrc/shopping-list-modal.png" width=50%>
 
 
 ### Features
 1. Mobile Compatibility
-![iPad Air W:820px](/files/iPadAir.png)
-- for reference: wider screen resolutions like Surface Pro 7 (W: 912px)
-![SurfacePro7 W:912px](/files/SurfacePro7.png)
+- iPad Air width: 820pixels
+<img src="/files/MDsrc/iPadAir.png" width=820px>
 
+
+- for reference: wider screen resolutions like Surface Pro 7 (W: 912px), shows 5 recipes instead of 4
+<img src="/files/MDsrc/SurfacePro7.png" width=912px>
+
+
+- try squeezing the screen to 500px or less!
+<img src="/files/MDsrc/rotate500.png" width=500px>
+
+2. my personal favourite: minimal borders 
+<img src="/files/MDsrc/minimalBorders.gif" width=50%>
 
 
 ### References: 
