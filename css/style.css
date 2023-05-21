@@ -889,7 +889,6 @@ li {
 	margin: auto;
 }
 
-
 .recipe-accordion {
 	display: block;
     margin: auto;
@@ -907,6 +906,16 @@ li {
 	border-radius: 0.3rem;
 }
 
+.genNewShoppingList:hover {
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 .recipe-accordion {
 	display: block;
@@ -919,6 +928,21 @@ li {
 	justify-content: space-between;
 }
 
+.mealPlanLabel span{
+	font-size: 0.9rem; 
+	margin: none;
+}
+
+.mealPlanRecipeLabel {
+	display: flex;
+	justify-content: space-between;
+}
+
+.mealPlanRecipeLabel span{
+	font-size: 0.8rem; 
+	margin: none;
+}
+
 .recipeNameDisplay {
 	display: flex;
 	width: 60rem;
@@ -926,12 +950,22 @@ li {
 	cursor: pointer;
 }
 
+.prodNameHoriLine {
+	width: 53rem;
+	margin: auto;
+}
+
+.prodList li{
+	display: flex;
+	justify-content: space-between;
+}
+
+
 .recipeNameDisplay span{
 	padding-left: 2.2rem;
 }
 
 .recipe-accordion-item-header {
-	/* cursor: pointer; */
 	border: none;
 	text-align: left;
 	outline: none;
@@ -939,7 +973,6 @@ li {
 	width: 66rem;
 	display: flex;
 }
-
 
 .editMealPlanOption {
 	font-size: 1.2rem;
@@ -963,7 +996,7 @@ li {
 
 .recipe-accordion-item-body ul {
 	margin: 0.5rem 0;
-	padding-left: 70px;
+	padding: 0 70px;
 }
 
 .recipe-accordion-item, .recipe-accordion-item-header, .recipe-accordion-item-body {
@@ -1486,7 +1519,25 @@ footer {
 
 
 
+/* meal plan */
+.mealPlanContent--Light {
+	background-color: #E0B3BA;
+	color: #960018;
+}
 
+.genNewShoppingList--Light {
+    color: #960018;
+    background-color: white;
+}
+
+.genNewShoppingList--Light:hover {
+    background-color: #B54C5C;
+    color: white;
+}
+
+.trashKun--Light:hover {
+	background-color: #e6c2c7;
+}
 
 
 /* end of LIGHT MODE STYLE */
@@ -1633,6 +1684,29 @@ footer {
     background-color: white;
     color: #292924;
 	outline: none;
+}
+
+
+/* meal plan */
+.mealPlanContent--Night {
+	background-color: #404040;
+	color: white;
+}
+
+
+.genNewShoppingList--Night {
+    background-color: #303030;
+    color: white;
+    outline: 2px solid white;
+}
+
+.genNewShoppingList--Night:hover {
+    background-color: white;
+    color: #292924;
+}
+
+.trashKun--Night:hover {
+	background-color: #292924;
 }
 
 

@@ -57,131 +57,6 @@ for (var i=0; i< editRecipeBtn.length; i++) {
 
 
 
-
-
-
-
-
-
-const recipeAccordions = document.querySelectorAll(".recipe-accordion");
-
-recipeAccordions.forEach(recipeAccordion => {
-    recipeAccordion.addEventListener("click", function(event) {
-        if (event.target.matches(".recipeNameDisplay")) {
-
-            var parentElement = event.target.parentElement;
-            var content = parentElement.nextElementSibling;
-            content.style.display = "none";
-
-            var accordionChevron = event.target.querySelector(".accordionChevron");
-            accordionChevron.style.transform = 'rotate(180deg)';
-            accordionChevron.style.transition = "all 0.5s ease-in-out;"
-
-
-            let active = this.querySelector(".recipeAccordionActive");
-
-            if (active == event.target) {
-                event.target.classList.toggle("recipeAccordionActive");
-
-                event.target.style.backgroundColor = '';  // if accordion title clicked = already active accordion, reset back to original backgroundColor
-                // event.target.style.textDecoration = 'none';
-
-                accordionChevron.style.transform = 'none';
-                
-                // var content = event.target.nextElementSibling;
-
-                var parentElement = event.target.parentElement;
-                var content = parentElement.nextElementSibling;
-
-                content.style.display = "block";
-                content.style.transition = "all 0.5s ease-in-out;"
-
-            } else {
-                //Remove current active.
-                if (active) {
-                    active.classList.remove("recipeAccordionActive");
-
-                    active.style.backgroundColor = '';  // reset any active accordions back to original backgroundColor
-                    // active.style.textDecoration = 'none';
-
-                    // var content = active.nextElementSibling;
-
-                    var parentElement = active.parentElement;
-                    var content = parentElement.nextElementSibling;
-
-                    content.style.display = "none";
-
-                    var accordionChevron = active.querySelector(".accordionChevron");
-                    accordionChevron.style.transform = 'none';
-                }
-                //Add active        
-                event.target.classList.add("recipeAccordionActive");
-
-                if (modeLight == "enabled") {
-                    event.target.style.backgroundColor = '#ca7d89';
-                    // event.target.style.textDecoration = 'underline';
-                }else{
-                    event.target.style.backgroundColor = '#292924';
-                    // event.target.style.textDecoration = 'underline';
-                }
-
-                // var content = event.target.nextElementSibling;
-
-                var parentElement = event.target.parentElement;
-                var content = parentElement.nextElementSibling;
-
-                content.style.display = "block";
-                content.style.transition = "all 0.5s ease-in-out;"
-            }
-
-            if (!(event.target.classList.contains("recipeAccordionActive"))) {
-
-                var parentElement = event.target.parentElement;
-                var content = parentElement.nextElementSibling;
-
-                // var content = event.target.nextElementSibling;
-                content.style.display = "none";
-            }
-        }
-    });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // MODE SWITCH
 
 const toggleBtn = document.getElementById("toggle-btn");
@@ -231,8 +106,12 @@ const recipeCard = document.getElementsByClassName("recipePageRecipeCard");
 const recipeIngredCard = document.getElementsByClassName("recipePageIngredientCard");
 const addToMealPlanBtn = document.getElementsByClassName("addToMealPlanBtn");
 
-let lightMode = localStorage.getItem("lightMode");
+/* meal plan page*/
+const mealPlanCard = document.getElementsByClassName("mealPlanContent");
+const genNewShoppingList = document.getElementsByClassName("genNewShoppingList");
+const trashKun = document.getElementsByClassName("editMealPlanOption");
 
+let lightMode = localStorage.getItem("lightMode");
 
 
 const enableLightMode = () => {
@@ -395,6 +274,23 @@ const enableLightMode = () => {
         addToMealPlanBtn[i].classList.remove("addToMealPlanBtn--Night");
     }
 
+    /* meal plan */
+    for (var i=0; i< mealPlanCard.length; i++) {
+        mealPlanCard[i].classList.add("mealPlanContent--Light");
+        mealPlanCard[i].classList.remove("mealPlanContent--Night");
+    }
+
+    for (var i=0; i< genNewShoppingList.length; i++) {
+        genNewShoppingList[i].classList.add("genNewShoppingList--Light");
+        genNewShoppingList[i].classList.remove("genNewShoppingList--Night");
+    }
+
+    for (var i=0; i< trashKun.length; i++) {
+        trashKun[i].classList.add("trashKun--Light");
+        trashKun[i].classList.remove("trashKun--Night");
+    }
+
+    
 
 
     /* Set localStorage value */
@@ -563,6 +459,21 @@ const disableLightMode = () => {
         addToMealPlanBtn[i].classList.remove("addToMealPlanBtn--Light");
     }
 
+    /* meal plan */
+    for (var i=0; i< mealPlanCard.length; i++) {
+        mealPlanCard[i].classList.add("mealPlanContent--Night");
+        mealPlanCard[i].classList.remove("mealPlanContent--Light");
+    }
+
+    for (var i=0; i< genNewShoppingList.length; i++) {
+        genNewShoppingList[i].classList.add("genNewShoppingList--Night");
+        genNewShoppingList[i].classList.remove("genNewShoppingList--Light");
+    }
+
+    for (var i=0; i< trashKun.length; i++) {
+        trashKun[i].classList.add("trashKun--Night");
+        trashKun[i].classList.remove("trashKun--Light");
+    }
 
 
     /* Set localStorage value */
@@ -589,6 +500,110 @@ toggleBtn.addEventListener("click", (e) => {
         disableLightMode();
     }
 });
+
+
+
+const recipeAccordions = document.querySelectorAll(".recipe-accordion");
+
+recipeAccordions.forEach(recipeAccordion => {
+    recipeAccordion.addEventListener("click", function(event) {
+        if (event.target.matches(".recipeNameDisplay")) {
+
+            var parentElement = event.target.parentElement;
+            var content = parentElement.nextElementSibling;
+            content.style.display = "none";
+
+            var accordionChevron = event.target.querySelector(".accordionChevron");
+            accordionChevron.style.transform = 'rotate(180deg)';
+            accordionChevron.style.transition = "all 0.5s ease-in-out;"
+
+
+            let active = this.querySelector(".recipeAccordionActive");
+
+            if (active == event.target) {
+                event.target.classList.toggle("recipeAccordionActive");
+
+                event.target.style.backgroundColor = '';  // if accordion title clicked = already active accordion, reset back to original backgroundColor
+
+                accordionChevron.style.transform = 'none';
+                
+
+                var parentElement = event.target.parentElement;
+                var content = parentElement.nextElementSibling;
+
+                content.style.display = "block";
+                content.style.transition = "all 0.5s ease-in-out;"
+
+            } else {
+                //Remove current active.
+                if (active) {
+                    active.classList.remove("recipeAccordionActive");
+
+                    active.style.backgroundColor = '';  // reset any active accordions back to original backgroundColor
+
+                    var parentElement = active.parentElement;
+                    var content = parentElement.nextElementSibling;
+
+                    content.style.display = "none";
+
+                    var accordionChevron = active.querySelector(".accordionChevron");
+                    accordionChevron.style.transform = 'none';
+                }
+                //Add active        
+                event.target.classList.add("recipeAccordionActive");
+
+                if (modeLight == "enabled") {
+                    event.target.style.backgroundColor = '#e6c2c7';
+                }else{
+                    event.target.style.backgroundColor = '#292924';
+                }
+
+
+                var parentElement = event.target.parentElement;
+                var content = parentElement.nextElementSibling;
+
+                content.style.display = "block";
+                content.style.transition = "all 0.5s ease-in-out;"
+            }
+
+            if (!(event.target.classList.contains("recipeAccordionActive"))) {
+
+                var parentElement = event.target.parentElement;
+                var content = parentElement.nextElementSibling;
+                content.style.display = "none";
+            }
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
