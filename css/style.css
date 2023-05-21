@@ -365,6 +365,12 @@ li {
 	text-align: center;
 }
 
+.viewMore:hover {
+	filter: brightness(120%);
+	font-size: 1.2rem;
+	transition: .3s ease-in-out;
+}
+
 .mealTitle, .recipeTitle {
 	display: inline;
 }

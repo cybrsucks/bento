@@ -11,6 +11,10 @@
         display: inline;
     }
 
+    .shopList {
+        list-style: none;
+    }
+
     .shopList li > span:nth-child(4) {
         /* refers to edit in shopping list */
         display: none;
