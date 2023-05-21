@@ -38,10 +38,16 @@ menu_btn.addEventListener('click', function () {
 var modal = document.getElementById("recipeModal");
 var editRecipeBtn = document.getElementsByClassName("editRecipeBtn");
 
+var ingredModal = document.getElementById("ingredModal");
+var editIngredBtn = document.getElementsByClassName("editIngredBtn");
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+    if (event.target == ingredModal) {
+        ingredModal.style.display = "none";
     }
 }
 
@@ -50,6 +56,23 @@ for (var i=0; i< editRecipeBtn.length; i++) {
         modal.style.display = "block";
     });
 }
+
+for (var i=0; i< editIngredBtn.length; i++) {
+    editIngredBtn[i].addEventListener("click", (e) => {
+        ingredModal.style.display = "block";
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

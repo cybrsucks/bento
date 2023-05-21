@@ -1386,8 +1386,45 @@ li {
     border-radius: 0.3rem;
 }
 
+.shopListModalField {
+	width: 8rem;
+}	
 
+.removeIngrBtn {
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	text-transform: uppercase;
+	font-size: 1rem;
+	color: #960018;
+	width: 14rem;
+	padding: 1rem;
+	text-align: center;
+	margin: auto;
+	background-color: #ca7d89;
+}
 
+.removeIngrBtn:hover {
+	background-color: #960018;
+	transition: .3s ease-in-out;
+	color: white;
+}
+
+.updateIngrBtn {
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	text-transform: uppercase;
+	font-size: 1rem;
+	color: #356A2B;
+	width: 12rem;
+	padding: 1rem;
+	text-align: center;
+	margin: auto;
+	background-color: #89ca7d;
+}
+
+.updateIngrBtn:hover {
+	background-color: #68bb59;
+	transition: .3s ease-in-out;
+	color: white;
+}
 
 
 

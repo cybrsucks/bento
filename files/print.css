@@ -20,7 +20,7 @@
         display: none;
     }
 
-    .mealPlanHoriLine, .mealPlanLabel, .printShopList {
+    #ingredModal, .mealPlanHoriLine, .mealPlanLabel, .printShopList {
         display: none;
     }
 }
