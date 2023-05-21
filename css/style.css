@@ -1005,10 +1005,14 @@ li {
 		height: 20rem;
 	}
 
+	.recipePageIngredList {
+		padding: 2rem 1rem;
+	}
+
 	.recipePageIngredList p {
-		width: 24rem;
+		width: 21rem;
 		padding: 1rem 0;
-		margin: auto auto auto 2.5rem;
+		margin: auto 1rem;
 	}
 	
 	.recipePageIngredCardHoriLine {
@@ -1016,7 +1020,7 @@ li {
 	}
 
 	.recipePageIngredListHoriLine {
-		width: 20rem;
+		width: 21rem;
 		margin: 0.2rem auto;
 	}
 	
