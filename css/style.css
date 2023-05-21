@@ -837,7 +837,7 @@ li {
 
 .recipePageIngredListHoriLine {
 	width: 25rem;
-    margin: 0.2rem auto;
+	margin: auto;
 }
 
 .addToMealPlanBtn {
@@ -855,6 +855,192 @@ li {
     transition: .3s ease-in-out;
 	cursor: pointer;
 }
+
+@media screen and (max-width: 1350px) {
+	.recipePage {
+		width: 70rem;
+	}
+
+	.recipePageRecipeCard {
+		width: 30rem;
+		height: 26rem;
+	}
+
+	.recipePageIngredientCard, .recipePageRecipeCardTitle {
+		width: 30rem;
+	}
+
+	.recipePageRecipeCardImg {
+		width: 30rem;
+		height: 20rem;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.recipePage {
+		width: 60rem;
+	}
+
+	.recipePageRecipeCard {
+		width: 28rem;
+		height: 26rem;
+	}
+
+	.recipePageRecipeCardTitle {
+		width: 28rem;
+	}
+
+	.recipePageIngredientCard {
+		width: 24rem;
+	}
+
+	.recipePageRecipeCardImg {
+		width: 28rem;
+		height: 20rem;
+	}
+
+	.recipePageIngredList p {
+		width: 18rem;
+		padding: 1rem 0 0 1rem;
+	}
+	
+	.recipePageIngredCardHoriLine {
+		width: 20rem;
+	}
+
+	.recipePageIngredListHoriLine {
+		width: 16rem;
+		margin: 0.2rem auto;
+	}
+	
+	.addToMealPlanBtn {
+		margin: 2rem 0 0 10rem;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.recipePageContent{
+		display: initial;
+	}
+		
+	.recipePage {
+		width: 40rem;
+	}
+
+	.recipePageRecipeCard {
+		width: 40rem;
+		height: 26rem;
+		margin: auto;
+		border-radius: 30px 30px 0 0;
+	}
+
+	.recipePageRecipeCardTitle {
+		width: 40rem;
+	}
+
+	.recipePageIngredientCard {
+		margin: 3rem auto auto auto;
+		width: 40rem;
+		border-radius: 0;
+	}
+
+	.recipePageRecipeCardImg {
+		width: 40rem;
+		height: 20rem;
+	}
+
+	.recipePageIngredList p {
+		width: 24rem;
+		padding: 1rem 0;
+	}
+	
+	.recipePageIngredCardHoriLine {
+		width: 25rem;
+	}
+
+	.recipePageIngredListHoriLine {
+		width: 25rem;
+		margin: 0.2rem auto;
+	}
+	
+	.addToMealPlanBtn {
+		margin: 2rem 0 0 15rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.recipePageContent{
+		display: initial;
+	}
+		
+	.recipePage {
+		width: 30rem;
+	}
+
+	.recipePageRecipeCard {
+		width: 25rem;
+		height: 26rem;
+		margin: auto;
+		border-radius: 30px 30px 0 0;
+	}
+
+	.recipePageRecipeCardTitle {
+		width: 25rem;
+	}
+
+	.recipePageIngredientCard {
+		margin: 3rem auto auto auto;
+		width: 25rem;
+		border-radius: 0;
+	}
+
+	.recipePageRecipeCardImg {
+		width: 25rem;
+		height: 20rem;
+	}
+
+	.recipePageIngredList p {
+		width: 24rem;
+		padding: 1rem 0;
+		margin: auto auto auto 2.5rem;
+	}
+	
+	.recipePageIngredCardHoriLine {
+		width: 25rem;
+	}
+
+	.recipePageIngredListHoriLine {
+		width: 20rem;
+		margin: 0.2rem auto;
+	}
+	
+	.addToMealPlanBtn {
+		margin: 2rem 0 0 11rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
