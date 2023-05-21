@@ -889,9 +889,6 @@ li {
 	margin: auto;
 }
 
-.mealPlanRecipes {
-	padding-left: 2rem;
-}
 
 .recipe-accordion {
 	display: block;
@@ -911,28 +908,54 @@ li {
 }
 
 
-
-
 .recipe-accordion {
 	display: block;
     width: 100%;
+	padding: 2rem 4rem;
+}
+
+.mealPlanLabel {
+	display: flex;
+	justify-content: space-between;
+}
+
+.recipeNameDisplay {
+	display: flex;
+	width: 60rem;
+	padding: 1.2rem 3rem 1.2rem 1.5rem;
+	cursor: pointer;
+}
+
+.recipeNameDisplay span{
+	padding-left: 2.2rem;
 }
 
 .recipe-accordion-item-header {
-	cursor: pointer;
-	padding: 18px 18px 18px 60px;
-	width: 100%;
+	/* cursor: pointer; */
 	border: none;
 	text-align: left;
 	outline: none;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+	width: 66rem;
+	display: flex;
 }
 
-.recipe-accordion-item-header:hover {
-	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+.editMealPlanOption {
+	font-size: 1.2rem;
+	/* width: 3rem; */
+	margin: auto;
+	text-align: center;
+	padding: 1.2rem 1.6rem;
+	cursor: pointer;
+}
+
+.recipeNameDisplay:hover, .editMealPlanOption:hover {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .recipe-accordion-item-body {
+	width: 60rem;
 	display: none;
 	background-color: rgba(99, 99, 99, 0.2);
 	padding: 8px;
@@ -942,11 +965,6 @@ li {
 	margin: 0.5rem 0;
 	padding-left: 70px;
 }
-
-/* .footer-accordionLight, .footer-accordionNight {
-	display: block;
-	width: 100%;
-} */
 
 .recipe-accordion-item, .recipe-accordion-item-header, .recipe-accordion-item-body {
 	transition: all 0.3s ease-in-out;

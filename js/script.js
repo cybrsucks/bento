@@ -67,9 +67,10 @@ const recipeAccordions = document.querySelectorAll(".recipe-accordion");
 
 recipeAccordions.forEach(recipeAccordion => {
     recipeAccordion.addEventListener("click", function(event) {
-        if (event.target.matches(".recipe-accordion-item-header")) {
+        if (event.target.matches(".recipeNameDisplay")) {
 
-            var content = event.target.nextElementSibling;
+            var parentElement = event.target.parentElement;
+            var content = parentElement.nextElementSibling;
             content.style.display = "none";
 
             var accordionChevron = event.target.querySelector(".accordionChevron");
@@ -83,11 +84,15 @@ recipeAccordions.forEach(recipeAccordion => {
                 event.target.classList.toggle("recipeAccordionActive");
 
                 event.target.style.backgroundColor = '';  // if accordion title clicked = already active accordion, reset back to original backgroundColor
-                event.target.style.textDecoration = 'none';
+                // event.target.style.textDecoration = 'none';
 
                 accordionChevron.style.transform = 'none';
                 
-                var content = event.target.nextElementSibling;
+                // var content = event.target.nextElementSibling;
+
+                var parentElement = event.target.parentElement;
+                var content = parentElement.nextElementSibling;
+
                 content.style.display = "block";
                 content.style.transition = "all 0.5s ease-in-out;"
 
@@ -97,9 +102,13 @@ recipeAccordions.forEach(recipeAccordion => {
                     active.classList.remove("recipeAccordionActive");
 
                     active.style.backgroundColor = '';  // reset any active accordions back to original backgroundColor
-                    active.style.textDecoration = 'none';
+                    // active.style.textDecoration = 'none';
 
-                    var content = active.nextElementSibling;
+                    // var content = active.nextElementSibling;
+
+                    var parentElement = active.parentElement;
+                    var content = parentElement.nextElementSibling;
+
                     content.style.display = "none";
 
                     var accordionChevron = active.querySelector(".accordionChevron");
@@ -110,19 +119,27 @@ recipeAccordions.forEach(recipeAccordion => {
 
                 if (modeLight == "enabled") {
                     event.target.style.backgroundColor = '#ca7d89';
-                    event.target.style.textDecoration = 'underline';
+                    // event.target.style.textDecoration = 'underline';
                 }else{
                     event.target.style.backgroundColor = '#292924';
-                    event.target.style.textDecoration = 'underline';
+                    // event.target.style.textDecoration = 'underline';
                 }
 
-                var content = event.target.nextElementSibling;
+                // var content = event.target.nextElementSibling;
+
+                var parentElement = event.target.parentElement;
+                var content = parentElement.nextElementSibling;
+
                 content.style.display = "block";
                 content.style.transition = "all 0.5s ease-in-out;"
             }
 
             if (!(event.target.classList.contains("recipeAccordionActive"))) {
-                var content = event.target.nextElementSibling;
+
+                var parentElement = event.target.parentElement;
+                var content = parentElement.nextElementSibling;
+
+                // var content = event.target.nextElementSibling;
                 content.style.display = "none";
             }
         }
