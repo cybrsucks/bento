@@ -656,7 +656,7 @@ li {
 .editRecipeModal {
 	display: none;
 	position: fixed;
-	z-index: 5;
+	z-index: 11;
 	padding: 3rem 0;
 	left: 0;
 	top: 0;
@@ -762,6 +762,51 @@ li {
 	text-align: center;
 	padding-top: 1rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+	.modalContentDiv{
+		padding-top: 1rem;
+	}
+	.editRecipeModalContent {
+		width: 25rem;
+	}
+	.modalHoriLine {
+		width: 21rem;
+		margin: auto;
+	}
+	.modalContentDiv {
+		width: 21rem;
+	}
+	.modalRecipeInfoFlex {
+		width: 21rem;
+		display: block;
+	}
+	.modalRecipeField {
+		margin: 1rem 0 0 2rem;
+		font-size: 1.1rem;
+		/* padding-left: 0; */
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1139,6 +1184,10 @@ li {
 	padding-right: 2rem;
 }
 
+.recipeNameMPL {
+	padding-left: 2rem;
+}
+
 .recipeNameDisplay span{
 	padding-left: 2.2rem;
 }
@@ -1294,7 +1343,7 @@ li {
 	}
 
 	.mealPlanLabel span {
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 	}
 
 	.editMPL {
@@ -1352,26 +1401,25 @@ li {
 
 .shopList li > span:nth-child(1) {
 	/* refers to product name in shopping list */
-	width: 28rem;
-	/* color: red; */
+	/* width: 28rem; */
+	width: 48%;
 }
 
 .shopList li > span:nth-child(2) {
 	/* refers to comma in shopping list */
 	display: none;
-	/* color: red; */
 }
 
 .shopList li > span:nth-child(3) {
 	/* refers to quantity in shopping list */
-	width: 27rem;
-	/* color: blue; */
+	/* width: 27rem; */
+	width: 44.5%;
 }
 
 .shopList li > span:nth-child(4) {
 	/* refers to edit in shopping list */
-	width: 5rem;
-	/* color: purple; */
+	/* width: 5rem; */
+	width: 7.5%;
 	cursor: pointer;
 }
 
@@ -1417,7 +1465,7 @@ li {
 	text-transform: uppercase;
 	font-size: 1rem;
 	color: #356A2B;
-	width: 12rem;
+	width: 14rem;
 	padding: 1rem;
 	text-align: center;
 	margin: auto;
@@ -1429,6 +1477,110 @@ li {
 	transition: .3s ease-in-out;
 	color: white;
 }
+
+
+
+@media screen and (max-width: 1350px) {
+	.printShopList {
+		margin: 2rem 0 0 42rem;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.printShopList {
+		margin: 2rem 0 0 33rem;
+	}
+
+	.shopList li {
+		width: 45rem;
+	}
+
+	.shopList li > span:nth-child(1) {
+		width: 47%;
+	}
+	
+	.shopList li > span:nth-child(3) {
+		/* refers to quantity in shopping list */
+		width: 42%;
+	}
+	
+	.shopList li > span:nth-child(4) {
+		/* refers to edit in shopping list */
+		/* width: 5rem; */
+		width: 11%;
+		cursor: pointer;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+	.printShopList {
+		margin: 2rem 0 0 13rem;
+	}
+
+	.shopList li {
+		width: 29rem;
+		font-size: 1rem;
+	}
+
+	.shopList li > span:nth-child(1) {
+		width: 45%;
+	}
+	
+	.shopList li > span:nth-child(3) {
+		/* refers to quantity in shopping list */
+		width: 39%;
+	}
+	
+	.shopList li > span:nth-child(4) {
+		/* refers to edit in shopping list */
+		/* width: 5rem; */
+		width: 16%;
+		cursor: pointer;
+	}
+
+
+}
+
+@media screen and (max-width: 700px) {
+	.printShopList {
+		margin: 2rem 0 0 3rem;
+	}
+
+	.shopList li {
+		width: 21rem;
+		font-size: 1rem;
+	}
+
+	.shopList li > span:nth-child(1) {
+		width: 45%;
+	}
+	
+	.shopList li > span:nth-child(3) {
+		/* refers to quantity in shopping list */
+		width: 39%;
+	}
+	
+	.shopList li > span:nth-child(4) {
+		/* refers to edit in shopping list */
+		/* width: 5rem; */
+		width: 16%;
+		cursor: pointer;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1937,12 +2089,18 @@ footer {
 }
 
 .genNewShoppingList--Light {
-    color: #960018;
     background-color: white;
+}
+
+.genNewShoppingList--Light a {
+    color: #960018;
 }
 
 .genNewShoppingList--Light:hover {
     background-color: #B54C5C;
+}
+
+.genNewShoppingList--Light:hover a{
     color: white;
 }
 
@@ -2104,16 +2262,22 @@ footer {
 	color: white;
 }
 
-
 .genNewShoppingList--Night {
     background-color: #303030;
-    color: white;
     outline: 2px solid white;
+}
+
+.genNewShoppingList--Night a {
+	color: white;
 }
 
 .genNewShoppingList--Night:hover {
     background-color: white;
     color: #292924;
+}
+
+.genNewShoppingList--Night:hover a {
+	color: #292924;
 }
 
 .trashKun--Night:hover {
@@ -2326,3 +2490,5 @@ footer {
 	100% {left: 5px;}
 }
 /* end of MODE SWITCH */
+
+
